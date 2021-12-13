@@ -1,0 +1,50 @@
+<!-- <ul class="list-group list-group-flush">
+  <li class="list-group-item">This li is NOT Bold</li>
+  <li class="font-weight-bold">This li is Bold</li>
+  <li class="list-group-item">
+    <span class="font-weight-bold">This span in li is Bold</span>
+  </li>
+  <li class="'font-weight-bold'">This li is NOT Bold</li>
+</ul> -->
+
+<div class="content" role="main">
+  <div class="card">
+    <div class="form-group">
+      <label for="search-text">Search Text</label>
+      <input
+        type="email"
+        class="form-control"
+        id="search-text"
+        aria-describedby="search-text"
+        placeholder="Enter text to search"
+        autofocus
+        [(ngModel)]="searchText"
+      />
+      <!-- [(ngModel)]="searchText" -->
+    </div>
+
+    <!-- <ul class="list-group list-group-flush">
+      <li
+        class="list-group-item"
+        *ngFor="let c of characters | appFilter: searchText"
+      >
+        {{ c }}
+      </li>
+    </ul> -->
+
+    <!-- results of ngFor is passed to appFilter with argument searchText -->
+    <ul class="list-group list-group-flush">
+      <li
+        class="list-group-item"
+        *ngFor="let c of characters | appFilter: searchText"
+        appHighlight
+        [searchedWord]="searchText"
+        [content]="c"
+        [setTitle]="true"
+      >
+        {{ c }}
+      </li>
+      <!-- [classToApply]="'font-weight-bold'" -->
+    </ul>
+  </div>
+</div>

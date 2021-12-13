@@ -1,3 +1,16 @@
-table {
-  width: 100%;
+nav {
+  padding: 0.2em;
+  margin: 0.2em;
+  font-size: large;
+}
+
+nav a {
+  padding: 0.5em;
+  color: gray;
+}
+
+nav a.active {
+  color: black;
+  font-weight: bold;
+  font-size: larger;
 }
