@@ -8,6 +8,7 @@ ng new mat-table-simple --routing --stye=css
 cd mat-table-simple
 npm i -S @angular/material @angular/cdk @angular/animations
 ng add @angular/material
+npm i -D json-server
 ```
 
 ```
@@ -190,6 +191,18 @@ SearchFilter
 
 Filtering
 
+Selection ???
+
+Footer
+
+Sticky Rows and Columns
+
+Multiple row templates
+
+Tables with display: flex
+
+Tables with MatRipple
+
 ```
 ng g c home --dry-run
 ng g c home
@@ -202,15 +215,105 @@ ng g c sorting
 ng g c pagesort
 ng g c searchfilter
 ng g c filter
+ng g c selection
+ng g c footer
+ng g c sticky
+ng g c flex
 ```
 
-## Screenshot
+```
+npm i -D json-server
+npx json-server --watch -p 3333 server.json
+"mock": "npx json-server --watch -p 3333 data/db.json",
+http://localhost:3333/
+http://localhost:3333/license
+npm run mock
+ng g c components\mock --dry-run
+ng g c components\mock
+ng g s services\licence --dry-run
+ng g s services\licence
+```
 
-![](image/README/basic_01.png)
+package.json
 
-![](image/README/basic_02.png)
+```
+"mock": "npx json-server --watch -p 3333 src/app/data/db.json --routes src/app/data/routes.json",
+```
 
-![](image/README/basic_03.png)
+src/app/data/routes.json
+
+```
+{
+  "/api/v1/licences": "/licences"
+}
+```
+
+src/app/data/db.json
+
+```
+{
+  "licences": [
+    {
+      "licId": 1,
+      "licNo": "0000169",
+      "licType": "Children's Residence",
+      "licName": "Hatts Off Inc.",
+      "licPlace": "Dundas",
+      "licPhone": "905-521-1555",
+      "licCondition": "NA"
+    },
+    ...
+```
+
+app.module.ts
+
+```
+import { HttpClientModule } from '@angular/common/http';
+...
+imports:[HttpClientModule,  ...]
+```
+
+src\app\models\license.ts
+
+```
+export interface License {
+  licId: number;
+  licNo: string;
+  licType: string;
+  licName: string;
+  licPlace: string;
+  licPhone: string;
+  licCondition: string;
+}
+```
+
+src\environments\environment.ts
+
+```
+export const environment = {
+  production: false,
+  serverUrl: 'http://localhost:3333',
+  apiUrl: '/api/v1',
+  root: '/',
+  version: '1.0',
+};
+```
+
+src\shared\URLs.ts
+
+```
+import { environment } from '@environments/environment';
+
+  ...
+  private static SERVER = environment.serverUrl;
+  private static API = environment.apiUrl;
+  public static LICENCE_ENDPOINT = URLs.SERVER + URLs.API + '/licences';
+  ...
+```
+
+![](image/README/mock.png)
+
+![](image/README/json-server.png)
 
 ## Logs / Branches
 
@@ -221,14 +324,21 @@ git checkout -b v0.03_row_template main
 git checkout -b v0.04_pagination main
 git checkout -b v0.05_sorting main
 git checkout -b v0.06_pagesort_v1 main
-
 git checkout -b v0.07_filter main
+
 git checkout -b v0.08_selection main
+
 git checkout -b v0.09_footer main
 git checkout -b v0.10_sticky main
+git checkout -b v0.11_flex main
+git checkout -b v0.12_folder main
+git checkout -b v0.13_mock main
 
 git checkout main
 git branch -a
+git branch
+
+git push --all
 ```
 
 ```dos
@@ -243,15 +353,31 @@ C:\Code\MyAngularMaterial\mat-table\mat-table-simple>git branch -a
   remotes/origin/main
 ```
 
+## Screenshot
+
+![](image/README/basic_01.png)
+
+![](image/README/basic_02.png)
+
+![](image/README/basic_03.png)
+
 ## Misc
 
-### Angular html inline code snippet
+### Angular UI inline code snippet
 
 html
 
 ```
   <pre>
     <code [innerHTML]="css_code"></code>
+  </pre>
+```
+
+or
+
+```
+  <pre>
+    <code [innerText]="html_code"></code>
   </pre>
 ```
 
@@ -383,4 +509,87 @@ p {
 </body>
 ```
 
+### Use <mat-form-field> instead of <input>
+
+### How to add multiple footers in a mat-table?
+
 ### How to move component files to a different folder smartly
+
+1. Create a new folder "src\app\components"
+
+2. Move home component from "src\app\" to "src\app\components\"
+
+3. Click "Yes" or "Always automatically update imports"
+
+![](image/README/move_component.png)
+
+4. Save All
+
+## Knowledge Points
+
+### mat-form-field
+
+### MatInputModule
+
+### Sticky Header / Footer / Column
+
+Just a few words -
+
+```
+sticky: true
+```
+
+Both header <mat-header-row> and footer <mat-footer-row> can be used.
+
+But it won't work for <mat-row>, even add in there :-)
+
+A column can be sticky as well.
+
+```
+<tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+
+<tr mat-footer-row *matFooterRowDef="displayedColumns; sticky: true"></tr>
+
+<ng-container matColumnDef="name" sticky>
+...
+```
+
+### Accessibility
+
+Always provide an accessible label for your tables via aria-label or aria-labelledby on the table element.
+
+### Tables with display: flex
+
+<table mat-table> ==> <mat-table>
+
+<tr mat-row> ==> <mat-row>
+
+<th mat-cell> ==> <mat-cell>
+
+<th mat-header-cell> ==> <mat-header-cell>
+
+<th mat-footer-cell> ==> <mat-footer-cell>
+
+### TakeUntil
+
+### Search
+
+### PhoneNumber
+
+### Loader
+
+### Animation
+
+### LiveAnnouncer
+
+### ...
+
+## TODO
+
+- @ViewChild
+
+- @Injectable
+
+- Loader
+
+- ?

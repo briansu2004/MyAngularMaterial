@@ -1,15 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
-import { BasicComponent } from './basic/basic.component';
-import { StylingComponent } from './styling/styling.component';
-import { RowTemplateComponent } from './row-template/row-template.component';
-import { PaginationComponent } from './pagination/pagination.component';
-import { SortingComponent } from './sorting/sorting.component';
-import { PagesortComponent } from './pagesort/pagesort.component';
-import { FilterComponent } from './filter/filter.component';
-import { SearchfilterComponent } from './searchfilter/searchfilter.component';
+import { HomeComponent } from './components/home/home.component';
+import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
+import { BasicComponent } from './components/basic/basic.component';
+import { StylingComponent } from './components/styling/styling.component';
+import { RowTemplateComponent } from './components/row-template/row-template.component';
+import { PaginationComponent } from './components/pagination/pagination.component';
+import { SortingComponent } from './components/sorting/sorting.component';
+import { PagesortComponent } from './components/pagesort/pagesort.component';
+import { FilterComponent } from './components/filter/filter.component';
+import { SearchfilterComponent } from './components/searchfilter/searchfilter.component';
+import { SelectionComponent } from './components/selection/selection.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { StickyComponent } from './components/sticky/sticky.component';
+import { FlexComponent } from './components/flex/flex.component';
+import { MockComponent } from './components/mock/mock.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -21,6 +26,12 @@ const routes: Routes = [
   { path: 'pagesort', component: PagesortComponent },
   { path: 'searchfilter', component: SearchfilterComponent },
   { path: 'filter', component: FilterComponent },
+  { path: 'selection', component: SelectionComponent },
+  { path: 'footer', component: FooterComponent },
+  { path: 'sticky', component: StickyComponent },
+  { path: 'flex', component: FlexComponent },
+  { path: 'mock', component: MockComponent },
+
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: PagenotfoundComponent },
 ];
@@ -41,4 +52,9 @@ export const routingComponents = [
   PagesortComponent,
   SearchfilterComponent,
   FilterComponent,
+  SelectionComponent,
+  FooterComponent,
+  StickyComponent,
+  FlexComponent,
+  MockComponent,
 ];

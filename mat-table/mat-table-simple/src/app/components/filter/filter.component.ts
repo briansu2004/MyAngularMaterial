@@ -57,6 +57,8 @@ export class FilterComponent implements OnInit, AfterViewInit {
 
   @ViewChild(MatSort) sort!: MatSort;
 
+  // @ViewChild(MatSort) filterValue!: string;
+
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
@@ -72,6 +74,16 @@ export class FilterComponent implements OnInit, AfterViewInit {
       this._liveAnnouncer.announce(`Sorted ${sortState.direction} ending`);
     } else {
       this._liveAnnouncer.announce('Sorting cleared');
+    }
+  }
+
+  applyFilter(event: any) {
+    // console.log('[applyFilter] event: ', event);
+    // console.log('[applyFilter] event.target: ', event.target);
+    // console.log('[applyFilter] event.target.value: ', event.target.value);
+
+    if (event.target && event.target.value && event.target.value !== '') {
+      this.dataSource.filter = event.target.value.trim().toLowerCase();
     }
   }
 }

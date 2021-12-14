@@ -1,0 +1,114 @@
+<div>
+  <pre>
+    <code [innerText]="html_code"></code>
+  </pre>
+</div>
+
+<mat-form-field>
+  <input (keyup)="applyFilter($event)" matInput placeholder="Filter" />
+</mat-form-field>
+
+<!-- <mat-table [dataSource]="dataSource">
+  <ng-container matColumnDef="username">
+    <mat-header-cell *matHeaderCellDef> User name </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.username}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="age">
+    <mat-header-cell *matHeaderCellDef> Age </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.age}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="title">
+    <mat-header-cell *matHeaderCellDef> Title </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.title}} </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="['username', 'age', 'title']"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: ['username', 'age', 'title']"></mat-row>
+</mat-table> -->
+
+<div class="mat-elevation-z8">
+  <mat-table
+    [dataSource]="dataSource"
+    matSort
+    (matSortChange)="announceSortChange($event)"
+  >
+    <!-- Position Column -->
+    <ng-container matColumnDef="position" sticky>
+      <mat-header-cell
+        *matHeaderCellDef
+        mat-sort-header
+        sortActionDescription="Sort by number"
+      >
+        No.
+      </mat-header-cell>
+      <mat-cell mat-cell *matCellDef="let element">{{
+        element.position
+      }}</mat-cell>
+      <mat-footer-cell mat-footer-cell *matFooterCellDef
+        >Analysis</mat-footer-cell
+      >
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <mat-header-cell
+        mat-header-cell
+        *matHeaderCellDef
+        mat-sort-header
+        sortActionDescription="Sort by name"
+      >
+        Name
+      </mat-header-cell>
+      <mat-cell *matCellDef="let element">{{ element.name }}</mat-cell>
+      <mat-footer-cell *matFooterCellDef></mat-footer-cell>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="weight">
+      <mat-header-cell
+        *matHeaderCellDef
+        mat-sort-header
+        sortActionDescription="Sort by weight"
+      >
+        Weight
+      </mat-header-cell>
+      <mat-cell *matCellDef="let element">{{ element.weight }}</mat-cell>
+      <mat-footer-cell mat-footer-cell *matFooterCellDef="let element">
+        {{ analysisWeight(element) }}
+      </mat-footer-cell>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="symbol">
+      <mat-header-cell
+        mat-header-cell
+        *matHeaderCellDef
+        mat-sort-header
+        sortActionDescription="Sort by symbol"
+      >
+        Symbol
+      </mat-header-cell>
+      <mat-cell mat-cell *matCellDef="let element">{{
+        element.symbol
+      }}</mat-cell>
+      <mat-footer-cell *matFooterCellDef></mat-footer-cell>
+    </ng-container>
+
+    <mat-header-row
+      *matHeaderRowDef="displayedColumns; sticky: true"
+    ></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+    <mat-footer-row
+      *matFooterRowDef="displayedColumns; sticky: true"
+    ></mat-footer-row>
+  </mat-table>
+
+  <mat-paginator
+    [pageSizeOptions]="[5, 10, 20, 100]"
+    showFirstLastButtons
+    aria-label="Select page of periodic elements"
+  >
+  </mat-paginator>
+</div>

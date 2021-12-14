@@ -1,7 +1,6 @@
-<div class="mat-elevation-z8">
-  <input type="text" name="filter" />
-  <input type="button" value="filter" />
-</div>
+<mat-form-field>
+  <input (keyup)="applyFilter($event)" matInput placeholder="Filter" />
+</mat-form-field>
 
 <div class="mat-elevation-z8">
   <table
