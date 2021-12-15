@@ -234,6 +234,16 @@ ng g s services\licence --dry-run
 ng g s services\licence
 ```
 
+```
+ng g s services\loader --dry-run
+ng g s services\loader
+ng g c components\async-load --dry-run
+ng g c components\async-load
+
+```
+
+## Json-Server mock
+
 package.json
 
 ```
@@ -311,9 +321,120 @@ import { environment } from '@environments/environment';
   ...
 ```
 
+mock.component.ts
+
+```
+  ngOnInit(): void {
+    // Using JSON
+    //dataSource = new MatTableDataSource<Licence>(LICENSE_DATA);
+
+    // Using mock by JSON-Server or real API
+    this.licenceService
+      .getLicences()
+      // .pipe(takeUntil(this.destroyed$))
+      .subscribe(
+        (data: any) => {
+          console.log('[ngOnInit] data: ', data);
+          if (data) {
+            this.dataSource.data = data;
+          }
+        },
+        (err: any) => {
+          console.log('[ngOnInit] err: ', err);
+        }
+      );
+  }
+```
+
 ![](image/README/mock.png)
 
 ![](image/README/json-server.png)
+
+## Loading
+
+```dos
+ng g s services\loader
+ng g s services\interceptor
+```
+
+loader.service.ts
+
+```
+export class LoaderService {
+  public isLoading: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(
+    false
+  );
+```
+
+interceptor.service.ts
+
+```
+export class InterceptorService implements HttpInterceptor {
+  constructor(public loaderService: LoaderService) {}
+
+  intercept(
+    req: HttpRequest<any>,
+    next: HttpHandler
+  ): Observable<HttpEvent<any>> {
+    this.loaderService.isLoading.next(true);
+
+    return next.handle(req).pipe(
+      finalize(() => {
+        this.loaderService.isLoading.next(false);
+      })
+    );
+  }
+```
+
+mypage.component.html
+
+```
+<div
+  class="loader-container"
+  *ngIf="loaderService.isLoading | async; else elseBlock"
+>
+  <mat-spinner style="top: 50%; left: 50%"></mat-spinner>
+</div>
+
+<ng-template #elseBlock>
+  <div>
+    <p>Finished loading!!!</p>
+  </div>
+</ng-template>
+```
+
+mypage.component.css
+
+```
+.loader-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: black;
+  opacity: 0.8;
+  z-index: 99;
+}
+```
+
+mypage.component.ts
+
+```
+  constructor(public loaderService: LoaderService) {}
+  ...
+
+    this.loaderService.isLoading.next(true);
+    this.licenceService.getLicences().subscribe(
+      async (data: any) => {
+        if (data) {
+          this.dataSource.data = data;
+          this.loaderService.isLoading.next(false);
+        }
+      },
+      (err: any) => {
+        this.loaderService.isLoading.next(false);
+      }
+    );
+```
 
 ## Logs / Branches
 
@@ -333,6 +454,7 @@ git checkout -b v0.10_sticky main
 git checkout -b v0.11_flex main
 git checkout -b v0.12_folder main
 git checkout -b v0.13_mock main
+git checkout -b v0.14_async_load main
 
 git checkout main
 git branch -a
@@ -350,7 +472,26 @@ C:\Code\MyAngularMaterial\mat-table\mat-table-simple>git branch -a
   v0.04_pagination
   v0.05_sorting
   v0.06_pagesort_v1
+  v0.07_filter
+  v0.09_footer
+  v0.10_sticky
+  v0.11_flex
+  v0.12_folder
+  v0.13_mock
+  v0.14_async_load
   remotes/origin/main
+  remotes/origin/v0.01_get_started
+  remotes/origin/v0.01_styling
+  remotes/origin/v0.03_row_template
+  remotes/origin/v0.04_pagination
+  remotes/origin/v0.05_sorting
+  remotes/origin/v0.06_pagesort_v1
+  remotes/origin/v0.07_filter
+  remotes/origin/v0.09_footer
+  remotes/origin/v0.10_sticky
+  remotes/origin/v0.11_flex
+  remotes/origin/v0.12_folder
+  remotes/origin/v0.13_mock
 ```
 
 ## Screenshot
@@ -572,15 +713,92 @@ Always provide an accessible label for your tables via aria-label or aria-labell
 
 ### TakeUntil
 
+Emits the values emitted by the source Observable until a notifier Observable emits a value.
+
+takeUntil<T>(notifier: ObservableInput<any>): MonoTypeOperatorFunction<T>
+
+The takeUntil operator is used to automatically unsubscribe from an observable. takeUntil begins mirroring the source Observable. It also monitors a second Observable, notifier that you provide.
+
+![](image/README/TakeUntil_01.png)
+
+![](image/README/TakeUntil_02.png)
+
+![](image/README/TakeUntil_03.png)
+
+Tick every second until the first click happens.
+
+```
+import { fromEvent, interval } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
+
+const source = interval(1000);
+const clicks = fromEvent(document, 'click');
+const result = source.pipe(takeUntil(clicks));
+result.subscribe(x => console.log(x));
+```
+
+### ReplaySubject
+
+ReplaySubject is a variant of a Subject which keeps a cache of previous values emitted by a source observable and sends them to all new observers immediately on subscription.
+
+ReplaySubject will replay the cached sequence of values even if the observer subscribes much later than the values were cached.
+
+```
+console.clear();
+import { ReplaySubject } from 'rxjs';
+
+const sub = new ReplaySubject(2);
+
+sub.next(1);
+sub.next(2);
+sub.subscribe(log1); // OUTPUT => 1,2
+sub.next(3); // OUTPUT => 3
+sub.next(4); // OUTPUT => 4
+sub.subscribe(log2); // OUTPUT => 2,3,4 (log of last 3 values from new subscriber)
+sub.next(5); // OUTPUT => 5,5 (log from both subscribers)
+sub.subscribe(log3);
+
+
+function log1(str: any) {
+  console.log('[log1] ', str);
+}
+
+function log2(str: any) {
+  console.log('[log2] ', str);
+}
+
+function log3(str: any) {
+  console.log('[log3] ', str);
+}
+```
+
+![](image/README/ReplaySubject.png)
+
+### mat-progress-spinner for loader
+
+```
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+```
+
+### MatDialogConfig
+
+...
+
+### DOCUMENT
+
+```
+import { DOCUMENT } from '@angular/common';
+```
+
 ### Search
 
 ### PhoneNumber
 
-### Loader
-
 ### Animation
 
 ### LiveAnnouncer
+
+### console.clear()
 
 ### ...
 
@@ -590,6 +808,6 @@ Always provide an accessible label for your tables via aria-label or aria-labell
 
 - @Injectable
 
-- Loader
+- MatDialogConfig
 
 - ?

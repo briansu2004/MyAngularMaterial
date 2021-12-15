@@ -15,6 +15,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { StickyComponent } from './components/sticky/sticky.component';
 import { FlexComponent } from './components/flex/flex.component';
 import { MockComponent } from './components/mock/mock.component';
+import { AsyncLoadComponent } from './components/async-load/async-load.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -31,7 +32,7 @@ const routes: Routes = [
   { path: 'sticky', component: StickyComponent },
   { path: 'flex', component: FlexComponent },
   { path: 'mock', component: MockComponent },
-
+  { path: 'asyncload', component: AsyncLoadComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: PagenotfoundComponent },
 ];
@@ -57,4 +58,5 @@ export const routingComponents = [
   StickyComponent,
   FlexComponent,
   MockComponent,
+  AsyncLoadComponent,
 ];

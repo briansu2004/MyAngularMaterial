@@ -1,0 +1,14 @@
+<!-- *ngIf="loaderService.isLoading | async" -->
+
+<div
+  class="loader-container"
+  *ngIf="loaderService.isLoading | async; else elseBlock"
+>
+  <mat-spinner style="top: 50%; left: 50%"></mat-spinner>
+</div>
+
+<ng-template #elseBlock>
+  <div>
+    <p>Finished loading!!!</p>
+  </div>
+</ng-template>

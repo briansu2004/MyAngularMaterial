@@ -1,10 +1,9 @@
 {
-  "name": "mat-table-simple",
+  "name": "mat-progess-bar-simple",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "mock": "npx json-server --watch --delay 2000 -p 3333 src/app/data/db.json --routes src/app/data/routes.json",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
@@ -32,7 +31,6 @@
     "@types/jasmine": "~3.8.0",
     "@types/node": "^12.11.1",
     "jasmine-core": "~3.8.0",
-    "json-server": "^0.17.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage": "~2.0.3",

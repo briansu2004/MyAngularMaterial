@@ -1,20 +1,19 @@
-import { AfterViewInit, Component, ViewChild, OnInit } from '@angular/core';
+import { Component, ViewChild, OnInit } from '@angular/core';
+import { LoaderService } from 'src/app/services/loader.service';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort, Sort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { LiveAnnouncer } from '@angular/cdk/a11y';
 import { Licence } from 'src/app/models/Licence';
-import { LICENSE_DATA } from 'src/app/services/license_data';
 import { LicenceService } from 'src/app/services/licence.service';
-import { LoaderService } from 'src/app/services/loader.service';
 import { BehaviorSubject, Observable, timer } from 'rxjs';
 
 @Component({
-  selector: 'app-mock',
-  templateUrl: './mock.component.html',
-  styleUrls: ['./mock.component.css'],
+  selector: 'app-async-load',
+  templateUrl: './async-load.component.html',
+  styleUrls: ['./async-load.component.css'],
 })
-export class MockComponent implements OnInit, AfterViewInit {
+export class AsyncLoadComponent implements OnInit {
   displayedColumns: string[] = [
     'licId',
     'licNo',
@@ -29,7 +28,8 @@ export class MockComponent implements OnInit, AfterViewInit {
 
   constructor(
     private _liveAnnouncer: LiveAnnouncer,
-    private licenceService: LicenceService
+    private licenceService: LicenceService,
+    public loaderService: LoaderService
   ) {}
 
   @ViewChild(MatPaginator)
@@ -37,30 +37,26 @@ export class MockComponent implements OnInit, AfterViewInit {
 
   @ViewChild(MatSort) sort!: MatSort;
 
-  // @ViewChild(MatSort) filterValue!: string;
-
   loadingSubject: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(true);
 
   ngOnInit(): void {
+    console.log('Loading...');
+    this.loaderService.isLoading.next(true);
+
     this.dataSource.data = [];
 
-    // Sorry - wait 2 seconds here purposely
-    //await timer(2000).pipe(take(1)).toPromise();
-    //timer(5000).pipe(take(1)).toPromise();
-
-    // Using JSON
-    //dataSource = new MatTableDataSource<Licence>(LICENSE_DATA);
-
-    // Using mock by JSON-Server or real API
     this.licenceService.getLicences().subscribe(
       async (data: any) => {
         console.log('[ngOnInit] data: ', data);
         if (data) {
           this.dataSource.data = data;
+          console.log('Loaded!');
+          this.loaderService.isLoading.next(false);
         }
       },
       (err: any) => {
-        console.log('[ngOnInit] err: ', err);
+        console.log('[ngOnInit] Error! - ', err);
+        this.loaderService.isLoading.next(false);
       }
     );
   }
@@ -88,38 +84,4 @@ export class MockComponent implements OnInit, AfterViewInit {
       this.dataSource.filter = event.target.value.trim().toLowerCase();
     }
   }
-
-  // getMinValue(columnName: any) {
-  //   return this.transactions
-  //     .map(t => t[columnName])
-  //     .reduce((acc, value) => Math.min(acc, value));
-  // }
-
-  // getMinItem(columnName: any) {
-  //   return this.transactions
-  //     .map(t => t[columnName])
-  //     .reduce((acc, value) => Math.min(acc, value));
-  // }
-
-  //total = this.transactions
-  //  .map(t => t.cost)
-  //  .reduce((acc, value) => acc + value, 0);
-
-  // analysisWeight(element: any) {
-  //   const result =
-  //     'Min: ' +
-  //     this.dataSource.data
-  //       .map((t) => t.weight)
-  //       .reduce((acc, value) => Math.min(acc, value)) +
-  //     '; Max: ' +
-  //     this.dataSource.data
-  //       .map((t) => t.weight)
-  //       .reduce((acc, value) => Math.max(acc, value)) +
-  //     '; Total: ' +
-  //     this.dataSource.data
-  //       .map((t) => t.weight)
-  //       .reduce((acc, value) => acc + value, 0);
-
-  //   return result;
-  // }
 }
