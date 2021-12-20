@@ -1,0 +1,330 @@
+<!-- <mat-form-field>
+  <input (keyup)="applyFilter($event)" matInput placeholder="Filter" />
+</mat-form-field> -->
+
+<mat-card>
+  <mat-card-header>
+    <h2 class="mat-h2">Search</h2>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-accordion displayMode="flat" [multi]="true">
+      <mat-expansion-panel [expanded]="true">
+        <mat-expansion-panel-header>
+          <h3 class="mat-h3">Search Criteria</h3>
+        </mat-expansion-panel-header>
+        <!-- <mat-divider class="ftis-margin-botton"></mat-divider> -->
+
+        <!--  [formGroup]="form" -->
+        <form class="form-container">
+          <div>
+            <p>To search CYSFA, please choose at least a search criterion.</p>
+          </div>
+          <mat-error aria-live="assertive" role="alert"
+            ><!-- *ngIf="invalidSearch" -->
+            <fa-icon aria-hidden="true" [icon]="faExclamation"></fa-icon>
+            Error Key
+          </mat-error>
+          <div style="color: green" aria-live="assertive" role="alert">
+            <!-- *ngIf="successKey !== null" -->
+            Success Key
+          </div>
+          <div fxLayout="column">
+            <div>
+              <div fxFlex="50%">
+                <mat-label fxFlex="25%" class="search-label" id="licNo"
+                  >{{ "search.licNo" }}
+                </mat-label>
+                <mat-form-field appearance="outline">
+                  <input
+                    matInput
+                    formControlName="licNo"
+                    aria-labelledby="licNo"
+                    maxlength="30"
+                  />
+                </mat-form-field>
+              </div>
+              <div fxFlex="50%">
+                <mat-label fxFlex="25%" class="search-label" id="licType"
+                  >{{ "search.licType" }}
+                </mat-label>
+                <mat-form-field appearance="outline">
+                  <input
+                    matInput
+                    formControlName="licType"
+                    aria-labelledby="licType"
+                    maxlength="30"
+                  />
+                </mat-form-field>
+              </div>
+            </div>
+            <div>
+              <div fxFlex="50%">
+                <mat-label fxFlex="25%" class="search-label" id="licName"
+                  >{{ "search.licName" }}
+                </mat-label>
+                <mat-form-field appearance="outline">
+                  <input
+                    matInput
+                    formControlName="licName"
+                    aria-labelledby="licName"
+                    maxlength="30"
+                  />
+                </mat-form-field>
+                <mat-datepicker-toggle
+                  matSuffix
+                  [for]="picker"
+                ></mat-datepicker-toggle>
+                <mat-datepicker #picker disabled="false"></mat-datepicker>
+              </div>
+              <div fxFlex="50%">
+                <mat-label fxFlex="25%" class="search-label" id="phoneNumber"
+                  >{{ "search.phoneNumber" | translate }}
+                </mat-label>
+                <mat-form-field appearance="outline">
+                  <input
+                    matInput
+                    formControlName="phoneNumber"
+                    aria-labelledby="phoneNumber"
+                    maxlength="20"
+                  />
+                </mat-form-field>
+              </div>
+            </div>
+            <div>
+              <div fxFlex="50%">
+                <mat-label fxFlex="25%" class="search-label" id="age"
+                  >{{ "search.age" | translate }}
+                </mat-label>
+                <mat-form-field appearance="outline">
+                  <input
+                    matInput
+                    formControlName="age"
+                    aria-labelledby="age"
+                    maxlength="3"
+                  />
+                </mat-form-field>
+              </div>
+              <div fxFlex="50%">
+                <mat-label
+                  fxFlex="25%"
+                  class="search-label"
+                  id="ageVariantLabel"
+                  >{{ "search.ageVariant" | translate }}
+                </mat-label>
+                <mat-form-field appearance="outline">
+                  <mat-select
+                    id="ageVariant"
+                    formControlName="ageVariant"
+                    aria-labelledby="ageVariantLabel"
+                  >
+                    <mat-option></mat-option>
+                    <mat-option *ngFor="let a of ageVariance" [value]="a">{{
+                      a
+                    }}</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+            </div>
+            <div>
+              <div fxFlex="50%">
+                <mat-label fxFlex="25%" class="search-label" id="street"
+                  >{{ "search.street" | translate }}
+                </mat-label>
+                <mat-form-field appearance="outline">
+                  <input
+                    matInput
+                    formControlName="street"
+                    aria-labelledby="street"
+                    maxlength="100"
+                  />
+                </mat-form-field>
+              </div>
+              <div fxFlex="50%">
+                <mat-label fxFlex="25%" class="search-label" id="city"
+                  >{{ "search.city" | translate }}
+                </mat-label>
+                <mat-form-field appearance="outline">
+                  <input
+                    matInput
+                    formControlName="city"
+                    aria-labelledby="city"
+                    maxlength="100"
+                  />
+                </mat-form-field>
+              </div>
+            </div>
+            <div fxFlexAlign="center">
+              <button
+                mat-raised-button
+                [color]="searchColor"
+                style="margin-right: 15px"
+                (click)="onSubmit()"
+                (mouseover)="searchColor = 'primary'"
+                (mouseout)="searchColor = ''"
+              >
+                {{ "search.searchBtn" | translate }}
+              </button>
+
+              <button
+                mat-raised-button
+                (click)="onReset()"
+                [color]="resetColor"
+                (mouseover)="resetColor = 'primary'"
+                (mouseout)="resetColor = ''"
+              >
+                {{ "search.resetBtn" | translate }}
+              </button>
+            </div>
+          </div>
+        </form>
+      </mat-expansion-panel>
+      <mat-expansion-panel [(expanded)]="searchClicked">
+        <mat-expansion-panel-header>
+          <h3 class="mat-h3">
+            {{
+              (searchClicked
+                ? "search.result-title-item"
+                : "search.result-title"
+              ) | translate: { param: items }
+            }}
+          </h3>
+        </mat-expansion-panel-header>
+        <!--ng-container *ngIf="searchClicked"-->
+        <div>
+          <p>{{ "description.cas-result" | translate }}</p>
+        </div>
+        <div
+          #resulttable
+          role="region"
+          aria-live="polite"
+          class="mat-elevation-z8"
+        >
+          <!-- Search Result Table -->
+          <table
+            mat-table
+            [dataSource]="dataSource"
+            matSort
+            (matSortChange)="announceSortChange($event)"
+          >
+            <!-- licId Column -->
+            <ng-container matColumnDef="licId" sticky>
+              <th
+                mat-header-cell
+                *matHeaderCellDef
+                mat-sort-header
+                sortActionDescription="Sort by licId"
+              >
+                No.
+              </th>
+              <td mat-cell *matCellDef="let element">{{ element.licId }}</td>
+              <!-- <td mat-footer-cell *matFooterCellDef>Analysis</td> -->
+            </ng-container>
+
+            <!-- licNo Column -->
+            <ng-container matColumnDef="licNo">
+              <th
+                mat-header-cell
+                *matHeaderCellDef
+                mat-sort-header
+                sortActionDescription="Sort by licNo"
+              >
+                Licence #
+              </th>
+              <td mat-cell *matCellDef="let element">{{ element.licNo }}</td>
+              <!-- <td mat-footer-cell *matFooterCellDef></td> -->
+            </ng-container>
+
+            <!-- licType Column -->
+            <ng-container matColumnDef="licType">
+              <th
+                mat-header-cell
+                *matHeaderCellDef
+                mat-sort-header
+                sortActionDescription="Sort by licType"
+              >
+                Licence Type
+              </th>
+              <td mat-cell *matCellDef="let element">{{ element.licType }}</td>
+              <!-- <td mat-footer-cell *matFooterCellDef="let element">
+        {{ analysisLicence(element) }}
+      </td> -->
+            </ng-container>
+
+            <!-- licName Column -->
+            <ng-container matColumnDef="licName">
+              <th
+                mat-header-cell
+                *matHeaderCellDef
+                mat-sort-header
+                sortActionDescription="Sort by licName"
+              >
+                Licence Agency Name
+              </th>
+              <td mat-cell *matCellDef="let element">{{ element.licName }}</td>
+              <!-- <td mat-footer-cell *matFooterCellDef></td> -->
+            </ng-container>
+
+            <!-- licPlace Column -->
+            <ng-container matColumnDef="licPlace">
+              <th
+                mat-header-cell
+                *matHeaderCellDef
+                mat-sort-header
+                sortActionDescription="Sort by licPlace"
+              >
+                City/Town/County
+              </th>
+              <td mat-cell *matCellDef="let element">{{ element.licPlace }}</td>
+              <!-- <td mat-footer-cell *matFooterCellDef></td> -->
+            </ng-container>
+
+            <!-- licPhone Column -->
+            <ng-container matColumnDef="licPhone">
+              <th
+                mat-header-cell
+                *matHeaderCellDef
+                mat-sort-header
+                sortActionDescription="Sort by licPhone"
+              >
+                License Phone Number
+              </th>
+              <td mat-cell *matCellDef="let element">{{ element.licPhone }}</td>
+              <!-- <td mat-footer-cell *matFooterCellDef></td> -->
+            </ng-container>
+
+            <!-- licCondition Column -->
+            <ng-container matColumnDef="licCondition">
+              <th
+                mat-header-cell
+                *matHeaderCellDef
+                mat-sort-header
+                sortActionDescription="Sort by licCondition"
+              >
+                Condition
+              </th>
+              <td mat-cell *matCellDef="let element">
+                {{ element.licCondition }}
+              </td>
+              <!-- <td mat-footer-cell *matFooterCellDef></td> -->
+            </ng-container>
+
+            <tr
+              mat-header-row
+              *matHeaderRowDef="displayedColumns; sticky: true"
+            ></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+            <!-- <tr mat-footer-row *matFooterRowDef="displayedColumns; sticky: true"></tr> -->
+          </table>
+
+          <mat-paginator
+            [pageSizeOptions]="[10, 20, 100]"
+            showFirstLastButtons
+            aria-label="Select page of licences"
+          >
+          </mat-paginator>
+        </div>
+        <!--/ng-container-->
+      </mat-expansion-panel>
+    </mat-accordion>
+  </mat-card-content>
+</mat-card>

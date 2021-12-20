@@ -239,7 +239,12 @@ ng g s services\loader --dry-run
 ng g s services\loader
 ng g c components\async-load --dry-run
 ng g c components\async-load
+```
 
+```
+npm i -S @fortawesome/fontawesome-free
+ng g c components\search --dry-run
+ng g c components\search
 ```
 
 ## Json-Server mock
@@ -455,6 +460,8 @@ git checkout -b v0.11_flex main
 git checkout -b v0.12_folder main
 git checkout -b v0.13_mock main
 git checkout -b v0.14_async_load main
+
+git checkout -b v0.15_search main
 
 git checkout main
 git branch -a
