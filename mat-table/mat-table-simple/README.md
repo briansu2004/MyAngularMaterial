@@ -7,8 +7,10 @@ npm install -g @angular/cli
 ng new mat-table-simple --routing --stye=css
 cd mat-table-simple
 npm i -S @angular/material @angular/cdk @angular/animations
+npm i -S @angular/flex-layout
 ng add @angular/material
 npm i -D json-server
+ng add @ng-bootstrap/ng-bootstrap
 ```
 
 ```
@@ -45,6 +47,28 @@ import { MatSortModule } from '@angular/material/sort';
     MatPaginatorModule,
     MatSortModule,
   ],
+```
+
+```
+C:\Code\MyAngularMaterial\mat-table\mat-table-simple>ng add @ng-bootstrap/ng-bootstrap
+ℹ Using package manager: npm
+✔ Found compatible package version: @ng-bootstrap/ng-bootstrap@10.0.0.
+✔ Package information loaded.
+
+The package @ng-bootstrap/ng-bootstrap@10.0.0 will be installed and executed.
+Would you like to proceed? Yes
+✔ Package successfully installed.
+UPDATE package.json (1811 bytes)
+✔ Packages installed successfully.
+UPDATE src/app/app.module.ts (2443 bytes)
+UPDATE angular.json (3122 bytes)
+UPDATE src/polyfills.ts (3049 bytes)
+```
+
+angular.json
+
+```
+"styles": ["node_modules/bootstrap/dist/css/bootstrap.min.css", "src/styles.css"],
 ```
 
 ```
@@ -243,6 +267,28 @@ ng g c components\async-load
 
 ```
 npm i -S @fortawesome/fontawesome-free
+npm i -S @fortawesome/free-solid-svg-icons
+ng add @fortawesome/angular-fontawesome
+```
+
+```
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
+@NgModule({
+  imports: [FontAwesomeModule]
+})
+export class MaterialModule {}
+
+//any component
+import { faGoogle } from '@fortawesome/free-brands-svg-icons';
+
+googleIcon = faGoogle;
+
+//html
+<fa-icon [icon]="googleIcon"></fa-icon>
+```
+
+```
 ng g c components\search --dry-run
 ng g c components\search
 ```
@@ -807,14 +853,101 @@ import { DOCUMENT } from '@angular/common';
 
 ### console.clear()
 
+### Turn off null check in TypeScript config
+
+Set strictNullChecks=false in tsconfig.json
+
+### JSON.parse()
+
+The JSON.parse() method parses a JSON string, constructing the JavaScript value or object described by the string.
+
+### @angular/flex-layout
+
+Very tricky!
+
+Too many tricks!
+
+Without installing flex-layout, no errors or warnings for flex syntax.
+
+But it won't work!
+
+```dos
+npm i -S @angular/flex-layout
+```
+
+app.module.ts
+
+```
+import { FlexLayoutModule } from '@angular/flex-layout';
+...
+
+@NgModule({
+    ...
+    imports: [ FlexLayoutModule ],
+    ...
+});
+```
+
+### Angular double exclamation mark
+
+In some cases you may want to cast a variable to be explicitly boolean. Why? Well, the number one reason is that most of time developers do not use type safe comparison operators.
+
+The type safe comparison operators are:
+
+Strictly equal: ===
+
+Strictly unequal: !==
+
+```
+function() {
+  var name = 'Brian';
+
+  //alert 'string'
+  window.alert(typeof name);
+
+  //cast to boolean
+  var bool = !!name;
+
+  //alert 'boolean'
+  window.alert(typeof bool);
+}
+```
+
+```
+!!null
+false
+
+!!''
+false
+
+!!undefined
+false
+
+!!'B'
+true
+
+!!' '
+true
+
+Number(false)
+0
+
+Number(true)
+1
+```
+
 ### ...
 
 ## TODO
+
+- Mat-Table filter by column
+
+filterPredicate ?
+
+https://stackoverflow.com/questions/50264911/material-table-datasource-filter-with-column-value
 
 - @ViewChild
 
 - @Injectable
 
 - MatDialogConfig
-
-- ?

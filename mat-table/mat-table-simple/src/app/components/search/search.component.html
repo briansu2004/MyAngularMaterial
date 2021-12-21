@@ -10,29 +10,33 @@
     <mat-accordion displayMode="flat" [multi]="true">
       <mat-expansion-panel [expanded]="true">
         <mat-expansion-panel-header>
-          <h3 class="mat-h3">Search Criteria</h3>
+          <h3 class="mat-h3">Criteria</h3>
         </mat-expansion-panel-header>
         <!-- <mat-divider class="ftis-margin-botton"></mat-divider> -->
 
-        <!--  [formGroup]="form" -->
-        <form class="form-container">
+        <form class="form-container" [formGroup]="form">
           <div>
-            <p>To search CYSFA, please choose at least a search criterion.</p>
+            <p>Please choose at least a search criterion.</p>
           </div>
-          <mat-error aria-live="assertive" role="alert"
-            ><!-- *ngIf="invalidSearch" -->
+          <mat-error aria-live="assertive" role="alert" *ngIf="invalidSearch">
             <fa-icon aria-hidden="true" [icon]="faExclamation"></fa-icon>
-            Error Key
+            <!-- Error message -->
+            {{ errorKey }}
           </mat-error>
-          <div style="color: green" aria-live="assertive" role="alert">
-            <!-- *ngIf="successKey !== null" -->
-            Success Key
+          <div
+            style="color: green"
+            aria-live="assertive"
+            role="alert"
+            *ngIf="successKey !== null && successKey !== ''"
+          >
+            <!-- Success message -->
+            {{ successKey }}
           </div>
           <div fxLayout="column">
             <div>
               <div fxFlex="50%">
                 <mat-label fxFlex="25%" class="search-label" id="licNo"
-                  >{{ "search.licNo" }}
+                  >Licence #
                 </mat-label>
                 <mat-form-field appearance="outline">
                   <input
@@ -45,7 +49,7 @@
               </div>
               <div fxFlex="50%">
                 <mat-label fxFlex="25%" class="search-label" id="licType"
-                  >{{ "search.licType" }}
+                  >Licence Type
                 </mat-label>
                 <mat-form-field appearance="outline">
                   <input
@@ -60,7 +64,7 @@
             <div>
               <div fxFlex="50%">
                 <mat-label fxFlex="25%" class="search-label" id="licName"
-                  >{{ "search.licName" }}
+                  >Licensee agency name
                 </mat-label>
                 <mat-form-field appearance="outline">
                   <input
@@ -70,21 +74,16 @@
                     maxlength="30"
                   />
                 </mat-form-field>
-                <mat-datepicker-toggle
-                  matSuffix
-                  [for]="picker"
-                ></mat-datepicker-toggle>
-                <mat-datepicker #picker disabled="false"></mat-datepicker>
               </div>
               <div fxFlex="50%">
-                <mat-label fxFlex="25%" class="search-label" id="phoneNumber"
-                  >{{ "search.phoneNumber" | translate }}
+                <mat-label fxFlex="25%" class="search-label" id="licPhone"
+                  >Licensee Phone Number
                 </mat-label>
                 <mat-form-field appearance="outline">
                   <input
                     matInput
-                    formControlName="phoneNumber"
-                    aria-labelledby="phoneNumber"
+                    formControlName="licPhone"
+                    aria-labelledby="licPhone"
                     maxlength="20"
                   />
                 </mat-form-field>
@@ -92,14 +91,14 @@
             </div>
             <div>
               <div fxFlex="50%">
-                <mat-label fxFlex="25%" class="search-label" id="age"
-                  >{{ "search.age" | translate }}
+                <mat-label fxFlex="25%" class="search-label" id="licPlace"
+                  >City/Town/County
                 </mat-label>
                 <mat-form-field appearance="outline">
                   <input
                     matInput
-                    formControlName="age"
-                    aria-labelledby="age"
+                    formControlName="licPlace"
+                    aria-labelledby="licPlace"
                     maxlength="3"
                   />
                 </mat-form-field>
@@ -108,71 +107,43 @@
                 <mat-label
                   fxFlex="25%"
                   class="search-label"
-                  id="ageVariantLabel"
-                  >{{ "search.ageVariant" | translate }}
+                  id="licConditionLabel"
+                  >Conditions
                 </mat-label>
                 <mat-form-field appearance="outline">
                   <mat-select
-                    id="ageVariant"
-                    formControlName="ageVariant"
-                    aria-labelledby="ageVariantLabel"
+                    id="licCondition"
+                    formControlName="licCondition"
+                    aria-labelledby="licConditionLabel"
                   >
                     <mat-option></mat-option>
-                    <mat-option *ngFor="let a of ageVariance" [value]="a">{{
-                      a
+                    <mat-option *ngFor="let c of licConditions" [value]="c">{{
+                      c
                     }}</mat-option>
                   </mat-select>
                 </mat-form-field>
               </div>
             </div>
-            <div>
-              <div fxFlex="50%">
-                <mat-label fxFlex="25%" class="search-label" id="street"
-                  >{{ "search.street" | translate }}
-                </mat-label>
-                <mat-form-field appearance="outline">
-                  <input
-                    matInput
-                    formControlName="street"
-                    aria-labelledby="street"
-                    maxlength="100"
-                  />
-                </mat-form-field>
-              </div>
-              <div fxFlex="50%">
-                <mat-label fxFlex="25%" class="search-label" id="city"
-                  >{{ "search.city" | translate }}
-                </mat-label>
-                <mat-form-field appearance="outline">
-                  <input
-                    matInput
-                    formControlName="city"
-                    aria-labelledby="city"
-                    maxlength="100"
-                  />
-                </mat-form-field>
-              </div>
-            </div>
             <div fxFlexAlign="center">
+              <!-- [color]="searchColor" -->
               <button
                 mat-raised-button
-                [color]="searchColor"
                 style="margin-right: 15px"
                 (click)="onSubmit()"
                 (mouseover)="searchColor = 'primary'"
                 (mouseout)="searchColor = ''"
               >
-                {{ "search.searchBtn" | translate }}
+                Search
               </button>
 
+              <!--[color]="resetColor" -->
               <button
                 mat-raised-button
                 (click)="onReset()"
-                [color]="resetColor"
                 (mouseover)="resetColor = 'primary'"
                 (mouseout)="resetColor = ''"
               >
-                {{ "search.resetBtn" | translate }}
+                Reset
               </button>
             </div>
           </div>
@@ -181,17 +152,17 @@
       <mat-expansion-panel [(expanded)]="searchClicked">
         <mat-expansion-panel-header>
           <h3 class="mat-h3">
-            {{
+            <!-- {{
               (searchClicked
                 ? "search.result-title-item"
                 : "search.result-title"
               ) | translate: { param: items }
-            }}
+            }} -->
           </h3>
         </mat-expansion-panel-header>
         <!--ng-container *ngIf="searchClicked"-->
         <div>
-          <p>{{ "description.cas-result" | translate }}</p>
+          <p>Search result</p>
         </div>
         <div
           #resulttable
