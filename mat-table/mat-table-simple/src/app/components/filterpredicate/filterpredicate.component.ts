@@ -12,7 +12,12 @@ import { LiveAnnouncer } from '@angular/cdk/a11y';
 import { Licence } from 'src/app/models/Licence';
 import { LicenceService } from 'src/app/services/licence.service';
 import { BehaviorSubject, Observable, timer } from 'rxjs';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
 import {
   faAngleDoubleUp,
   faAngleDown,
@@ -50,7 +55,11 @@ export class FilterpredicateComponent implements OnInit, AfterViewInit {
 
   dataSource = new MatTableDataSource<Licence>();
 
-  form!: FormGroup;
+  public form!: FormGroup;
+
+  public licNo = '';
+  public licType = '';
+  public licName = '';
 
   faAngleUp = faAngleUp;
   faAngleDown = faAngleDown;
@@ -188,8 +197,6 @@ export class FilterpredicateComponent implements OnInit, AfterViewInit {
       async (data: any) => {
         console.log('[onSubmit] data: ', data);
         if (data) {
-          this.dataSource.data = data;
-
           // if (!!cyfsaSearchCriteria.licNo) {
           //   this.dataSource.filter += cyfsaSearchCriteria.licNo
           //     .trim()
@@ -255,6 +262,14 @@ export class FilterpredicateComponent implements OnInit, AfterViewInit {
           //console.log('cyfsaSearchCriteria.licNo: ', cyfsaSearchCriteria.licNo);
 
           console.log('Loaded!');
+
+          this.applyFilter();
+          this.dataSource.filterPredicate = this.getFilterPredicate();
+
+          console.log('Filtered!');
+
+          this.dataSource.data = data;
+
           this.loaderService.isLoading.next(false);
         }
       },
@@ -417,19 +432,90 @@ export class FilterpredicateComponent implements OnInit, AfterViewInit {
 
     //this.dataSource.filterPredicate = this.createFilter();
 
-    this.dataSource.filterPredicate = (data: Licence, filter: string) => {
-      const dataStr = data.licNo; // + data.details.name + data.details.symbol + data.details.weight;
+    // this.dataSource.filterPredicate = (data: Licence, filter: string) => {
+    //   const dataStr = data.licNo; // + data.details.name + data.details.symbol + data.details.weight;
 
-      filter = cyfsaSearchCriteria.licNo;
+    //   filter = cyfsaSearchCriteria.licNo;
 
-      console.log('filter: ', filter);
+    //   console.log('filter: ', filter);
 
-      //return dataStr.indexOf(cyfsaSearchCriteria.licNo) != -1;
+    //   //return dataStr.indexOf(cyfsaSearchCriteria.licNo) != -1;
 
-      return data.licName.indexOf('z') != -1;
-    };
+    //   return data.licName.indexOf('z') != -1;
+    // };
 
     //this.fieldListener();
+
+    this.searchFormInit();
+    // Filter predicate used for filtering table per different columns
+    //this.dataSource.filterPredicate = this.getFilterPredicate();
+  }
+
+  getFilterPredicate() {
+    return (row: Licence, filters: string) => {
+      // split string per '$' to array
+      const filterArray = filters.split('$');
+      const licNo = filterArray[0];
+      const licType = filterArray[1];
+      const licName = filterArray[2];
+
+      const matchFilter = [];
+
+      // Fetch data from row
+      const columnLicNo = row.licNo;
+      const columnLicType = row.licType;
+      const columnLicName = row.licName;
+
+      // verify fetching data by our searching values
+      const customFilterLicNo = columnLicNo
+        .toString()
+        .toLowerCase()
+        .includes(licNo);
+      const customFilterLicType = columnLicType.toLowerCase().includes(licType);
+      const customFilterLicName = columnLicName.toLowerCase().includes(licName);
+
+      // push boolean values into array
+      matchFilter.push(customFilterLicNo);
+      matchFilter.push(customFilterLicType);
+      matchFilter.push(customFilterLicName);
+
+      // return true if all values in array is true
+      // else return false
+      return matchFilter.every(Boolean);
+    };
+  }
+
+  searchFormInit() {
+    this.form = new FormGroup({
+      licNo: new FormControl('', Validators.pattern('^[0-9 ]+$')),
+      licType: new FormControl('', Validators.pattern('^[a-zA-Z0-9 ]+$')),
+      licName: new FormControl('', Validators.pattern('^[a-zA-Z0-9 ]+$')),
+    });
+  }
+
+  applyFilter() {
+    const formLicNo = this.form.get('licNo');
+    const formLicType = this.form.get('licType');
+    const formLicName = this.form.get('licName');
+
+    this.licNo =
+      formLicNo === null || formLicNo.value === ''
+        ? ''
+        : formLicNo.value.toString();
+    this.licType =
+      formLicType === null || formLicType.value === ''
+        ? ''
+        : formLicType.value.toString();
+    this.licName =
+      formLicName === null || formLicName.value === ''
+        ? ''
+        : formLicName.value.toString();
+
+    // create string of our searching values and split if by '$'
+    const filterValue = this.licNo + '$' + this.licType + '$' + this.licName;
+    console.log('filterValue: ', filterValue);
+
+    this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
   ngAfterViewInit() {
