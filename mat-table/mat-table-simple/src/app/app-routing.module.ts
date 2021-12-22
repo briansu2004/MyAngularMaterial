@@ -17,6 +17,7 @@ import { FlexComponent } from './components/flex/flex.component';
 import { MockComponent } from './components/mock/mock.component';
 import { AsyncLoadComponent } from './components/async-load/async-load.component';
 import { SearchComponent } from './components/search/search.component';
+import { FilterpredicateComponent } from './components/filterpredicate/filterpredicate.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -35,6 +36,7 @@ const routes: Routes = [
   { path: 'mock', component: MockComponent },
   { path: 'asyncload', component: AsyncLoadComponent },
   { path: 'search', component: SearchComponent },
+  { path: 'flterpredicate', component: FilterpredicateComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: PagenotfoundComponent },
 ];
@@ -62,4 +64,5 @@ export const routingComponents = [
   MockComponent,
   AsyncLoadComponent,
   SearchComponent,
+  FilterpredicateComponent,
 ];

@@ -291,6 +291,8 @@ googleIcon = faGoogle;
 ```
 ng g c components\search --dry-run
 ng g c components\search
+ng g c components\filterpredicate --dry-run
+ng g c components\filterpredicate
 ```
 
 ## Json-Server mock
@@ -497,17 +499,16 @@ git checkout -b v0.04_pagination main
 git checkout -b v0.05_sorting main
 git checkout -b v0.06_pagesort_v1 main
 git checkout -b v0.07_filter main
-
 git checkout -b v0.08_selection main
-
 git checkout -b v0.09_footer main
 git checkout -b v0.10_sticky main
 git checkout -b v0.11_flex main
 git checkout -b v0.12_folder main
 git checkout -b v0.13_mock main
 git checkout -b v0.14_async_load main
-
 git checkout -b v0.15_search main
+
+git checkout -b v0.16_filterpredicate main
 
 git checkout main
 git branch -a
