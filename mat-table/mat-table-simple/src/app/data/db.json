@@ -5,25 +5,25 @@
       "licNo": "0000169",
       "licType": "Children's Residence",
       "licName": "Hatts Off Inc.",
-      "licPlace": "Dundas",
+      "licPlace": "York",
       "licPhone": "905-521-1555",
       "licCondition": "NA"
     },
     {
       "licId": 2,
       "licNo": "0000170",
-      "licType": "Children's Residence",
+      "licType": "Adult's Residence",
       "licName": "Good Shepherd Centre Hamilton",
       "licPlace": "Hamilton",
-      "licPhone": "905-528-5877",
-      "licCondition": "View conditions"
+      "licPhone": "416-528-5877",
+      "licCondition": "NA"
     },
     {
       "licId": 3,
       "licNo": "0000171",
-      "licType": "Children's Residence",
+      "licType": "Someone's Residence",
       "licName": "Hatts Off Inc.",
-      "licPlace": "Dundas",
+      "licPlace": "Toronto",
       "licPhone": "905-521-1555",
       "licCondition": "NA"
     },
@@ -32,16 +32,16 @@
       "licNo": "0000172",
       "licType": "Children's Residence",
       "licName": "Good Shepherd Centre Hamilton",
-      "licPlace": "Hamilton",
-      "licPhone": "905-528-5877",
-      "licCondition": "View conditions"
+      "licPlace": "Mississauga",
+      "licPhone": "905-528-7686",
+      "licCondition": "NA"
     },
     {
       "licId": 5,
       "licNo": "0000173",
-      "licType": "Children's Residence",
+      "licType": "Kids' Residence",
       "licName": "Storey Homes Ltd.",
-      "licPlace": "Dundas",
+      "licPlace": "King",
       "licPhone": "905-521-1555",
       "licCondition": "NA"
     },
@@ -51,22 +51,22 @@
       "licType": "Children's Residence",
       "licName": "Good Shepherd Centre Hamilton",
       "licPlace": "Hamilton",
-      "licPhone": "905-528-5877",
+      "licPhone": "905-528-1246",
       "licCondition": "View conditions"
     },
     {
       "licId": 7,
       "licNo": "0000175",
-      "licType": "Children's Residence",
+      "licType": "John's Residence",
       "licName": "11381 Ontario Ltd.",
-      "licPlace": "Dundas",
+      "licPlace": "Markham",
       "licPhone": "905-521-1555",
       "licCondition": "NA"
     },
     {
       "licId": 8,
       "licNo": "0000176",
-      "licType": "Children's Residence",
+      "licType": "Doe's Residence",
       "licName": "Good Shepherd Centre Hamilton",
       "licPlace": "Hamilton",
       "licPhone": "905-528-5877",
@@ -75,10 +75,10 @@
     {
       "licId": 9,
       "licNo": "0000177",
-      "licType": "Children's Residence",
+      "licType": "Mike's Residence",
       "licName": "Hatts Off Inc.",
-      "licPlace": "Dundas",
-      "licPhone": "905-521-1555",
+      "licPlace": "Richmond Hill",
+      "licPhone": "289-521-4577",
       "licCondition": "NA"
     },
     {
@@ -87,16 +87,16 @@
       "licType": "Children's Residence",
       "licName": "Good Shepherd Centre Hamilton",
       "licPlace": "Hamilton",
-      "licPhone": "905-528-5877",
+      "licPhone": "416-528-5877",
       "licCondition": "View conditions"
     },
     {
       "licId": 11,
       "licNo": "0000179",
-      "licType": "Children's Residence",
+      "licType": "Peter's Residence",
       "licName": "Hatts Off Inc.",
       "licPlace": "Dundas",
-      "licPhone": "905-521-1555",
+      "licPhone": "800-521-1555",
       "licCondition": "NA"
     },
     {
@@ -105,7 +105,7 @@
       "licType": "Children's Residence",
       "licName": "Good Shepherd Centre Hamilton",
       "licPlace": "Hamilton",
-      "licPhone": "905-528-5877",
+      "licPhone": "647-528-5877",
       "licCondition": "View conditions"
     }
   ]

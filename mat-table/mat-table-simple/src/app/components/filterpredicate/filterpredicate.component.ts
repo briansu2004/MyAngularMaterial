@@ -60,6 +60,9 @@ export class FilterpredicateComponent implements OnInit, AfterViewInit {
   public licNo = '';
   public licType = '';
   public licName = '';
+  public licPlace = '';
+  public licPhone = '';
+  public licCondition = '';
 
   faAngleUp = faAngleUp;
   faAngleDown = faAngleDown;
@@ -99,8 +102,6 @@ export class FilterpredicateComponent implements OnInit, AfterViewInit {
   @ViewChild('resulttable')
   target!: ElementRef;
 
-  // @ViewChild(MatSort) filterValue!: string;
-
   loadingSubject: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(true);
 
   /** Announce the change in sort state for assistive technology. */
@@ -116,27 +117,8 @@ export class FilterpredicateComponent implements OnInit, AfterViewInit {
     }
   }
 
-  // applyFilter(event: any) {
-  //   if (event.target && event.target.value && event.target.value !== '') {
-  //     this.dataSource.filter = event.target.value.trim().toLowerCase();
-  //   }
-  // }
-
   onReset() {
     console.log('[onReset]');
-
-    // window.sessionStorage.removeItem('CASSEARCH');
-    // window.sessionStorage.removeItem('CASSEARCHRESULT');
-    // window.sessionStorage.removeItem('CASFILTREDSEARCHRESULT');
-    // window.sessionStorage.removeItem('CASSEARCHSORTINFORMATION');
-    // this.searchClicked = false;
-    // this.filtered = false;
-    // this.filteredData = null;
-    // this.invalidSearch = false;
-    // this.dataSource.data = [];
-    // this.items = 0;
-    // this.filtered = false;
-    // this.successKey = 'success.reset';
 
     window.sessionStorage.removeItem('CYFSASEARCH');
     this.invalidSearch = false;
@@ -165,7 +147,9 @@ export class FilterpredicateComponent implements OnInit, AfterViewInit {
       Number(!!cyfsaSearchCriteria.licNo) +
       Number(!!cyfsaSearchCriteria.licType) +
       Number(!!cyfsaSearchCriteria.licName) +
-      Number(!!cyfsaSearchCriteria.licPlace);
+      Number(!!cyfsaSearchCriteria.licPlace) +
+      Number(!!cyfsaSearchCriteria.licPhone) +
+      Number(!!cyfsaSearchCriteria.licCondition);
 
     // Need at least one search criteria
     if (coreCriteriaFieldCount == 0) {
@@ -187,7 +171,7 @@ export class FilterpredicateComponent implements OnInit, AfterViewInit {
     );
 
     this.dataSource.data = [];
-    this.dataSource.filter = '';
+    //this.dataSource.filter = '';
 
     console.log('Loading...');
     this.loaderService.isLoading.next(true);
@@ -197,75 +181,10 @@ export class FilterpredicateComponent implements OnInit, AfterViewInit {
       async (data: any) => {
         console.log('[onSubmit] data: ', data);
         if (data) {
-          // if (!!cyfsaSearchCriteria.licNo) {
-          //   this.dataSource.filter += cyfsaSearchCriteria.licNo
-          //     .trim()
-          //     .toLowerCase();
-          // }
-
-          // if (!!cyfsaSearchCriteria.licType) {
-          //   this.dataSource.filter += cyfsaSearchCriteria.licType
-          //     .trim()
-          //     .toLowerCase();
-          // }
-
-          // if (!!cyfsaSearchCriteria.licName) {
-          //   this.dataSource.filter += cyfsaSearchCriteria.licName
-          //     .trim()
-          //     .toLowerCase();
-          // }
-
-          // if (!!cyfsaSearchCriteria.licPlace) {
-          //   this.dataSource.filter += cyfsaSearchCriteria.licPlace
-          //     .trim()
-          //     .toLowerCase();
-          // }
-
-          // console.log('filter: ', this.dataSource.filter);
-
-          //this.dataSource.filterPredicate = this.createFilter();
-
-          // console.log('cyfsaSearchCriteria: ', cyfsaSearchCriteria);
-          // console.log(
-          //   '!!cyfsaSearchCriteria.licNo: ',
-          //   !!cyfsaSearchCriteria.licNo
-          // );
-
-          // this.dataSource.filterPredicate = function (data: Licence): boolean {
-          //   console.log(
-          //     'data.licNo.toLowerCase().includes(cyfsaSearchCriteria.licNo.toLowerCase()): ',
-          //     data.licNo
-          //       .toLowerCase()
-          //       .includes(cyfsaSearchCriteria.licNo.toLowerCase())
-          //   );
-
-          //   return (
-          //     !!cyfsaSearchCriteria.licNo &&
-          //     data.licNo
-          //       .toLowerCase()
-          //       .includes(cyfsaSearchCriteria.licNo.toLowerCase()) &&
-          //     !!cyfsaSearchCriteria.licNo &&
-          //     data.licType
-          //       .toLowerCase()
-          //       .includes(cyfsaSearchCriteria.licType.toLowerCase()) &&
-          //     !!cyfsaSearchCriteria.licNo &&
-          //     data.licName
-          //       .toLowerCase()
-          //       .includes(cyfsaSearchCriteria.licName.toLowerCase()) &&
-          //     !!cyfsaSearchCriteria.licNo &&
-          //     data.licPlace
-          //       .toLowerCase()
-          //       .includes(cyfsaSearchCriteria.licPlace.toLowerCase())
-          //   );
-          // };
-
-          //console.log('cyfsaSearchCriteria.licNo: ', cyfsaSearchCriteria.licNo);
-
           console.log('Loaded!');
 
           this.applyFilter();
           this.dataSource.filterPredicate = this.getFilterPredicate();
-
           console.log('Filtered!');
 
           this.dataSource.data = data;
@@ -280,86 +199,7 @@ export class FilterpredicateComponent implements OnInit, AfterViewInit {
     );
   }
 
-  licNoFilter = new FormControl('');
-  licTypeFilter = new FormControl('');
-  licNameFilter = new FormControl('');
-  licPlaceFilter = new FormControl('');
-
-  filterValues: any = {
-    licNo: '',
-    licType: '',
-    licName: '',
-    licPlace: '',
-  };
-
-  clearFilter() {
-    this.licNoFilter.setValue('');
-    this.licTypeFilter.setValue('');
-    this.licNameFilter.setValue('');
-    this.licPlaceFilter.setValue('');
-  }
-
-  private createFilter(): (licence: Licence, filter: string) => boolean {
-    let filterFunction = function (licence: Licence, filter: string): boolean {
-      //console.log('[createFilter] filter: ', filter);
-      let searchTerms = JSON.parse(filter);
-
-      return (
-        licence.licNo.indexOf(searchTerms.licNo) !== -1 &&
-        licence.licType.indexOf(searchTerms.licType) !== -1 &&
-        licence.licName.indexOf(searchTerms.licName) !== -1 &&
-        licence.licPlace.indexOf(searchTerms.licPlace) !== -1
-      );
-    };
-
-    //console.log('filterFunction: ', filterFunction);
-    return filterFunction;
-  }
-
-  private fieldListener(): void {
-    this.licNoFilter.valueChanges.subscribe((licNo) => {
-      this.filterValues.licNo = licNo;
-      this.dataSource.filter = JSON.stringify(this.filterValues);
-    });
-
-    this.licTypeFilter.valueChanges.subscribe((licType) => {
-      this.filterValues.licType = licType;
-      this.dataSource.filter = JSON.stringify(this.filterValues);
-    });
-
-    this.licNameFilter.valueChanges.subscribe((licName) => {
-      this.filterValues.licName = licName;
-      this.dataSource.filter = JSON.stringify(this.filterValues);
-    });
-
-    this.licPlaceFilter.valueChanges.subscribe((licPlace) => {
-      this.filterValues.licPlace = licPlace;
-      this.dataSource.filter = JSON.stringify(this.filterValues);
-    });
-
-    console.log(
-      '[fieldListener] this.dataSource.filter',
-      this.dataSource.filter
-    );
-  }
-
   ngOnInit(): void {
-    // let searchCriteria: CyfsaSearchCriteria;
-
-    // if (window.sessionStorage.getItem('CYFSASEARCH')) {
-    //   //searchCriteria = JSON.parse(window.sessionStorage.getItem('CYFSASEARCH'));
-    //   searchCriteria = window.sessionStorage.getItem('CYFSASEARCH');
-    // }
-
-    // window.sessionStorage.setItem(
-    //   'MYCASALERTSRESULTS',
-    //   JSON.stringify(this.searchResults)
-    // );
-
-    // const searchCriteria: cyfsaSearchCriteria = JSON.parse(
-    //   window.sessionStorage.getItem('CASSEARCH')
-    // );
-
     const searchCriteria1 = window.sessionStorage.getItem('CYFSASEARCH') as
       | string
       | null;
@@ -402,53 +242,7 @@ export class FilterpredicateComponent implements OnInit, AfterViewInit {
       licCondition: this.form.value.licCondition,
     };
 
-    // this.dataSource.filterPredicate = function (data: Licence): boolean {
-    //   console.log(
-    //     'data.licNo.toLowerCase().includes(cyfsaSearchCriteria.licNo.toLowerCase()): ',
-    //     data.licNo
-    //       .toLowerCase()
-    //       .includes(cyfsaSearchCriteria.licNo.toLowerCase())
-    //   );
-
-    //   return (
-    //     !!cyfsaSearchCriteria.licNo &&
-    //     data.licNo
-    //       .toLowerCase()
-    //       .includes(cyfsaSearchCriteria.licNo.toLowerCase()) &&
-    //     !!cyfsaSearchCriteria.licNo &&
-    //     data.licType
-    //       .toLowerCase()
-    //       .includes(cyfsaSearchCriteria.licType.toLowerCase()) &&
-    //     !!cyfsaSearchCriteria.licNo &&
-    //     data.licName
-    //       .toLowerCase()
-    //       .includes(cyfsaSearchCriteria.licName.toLowerCase()) &&
-    //     !!cyfsaSearchCriteria.licNo &&
-    //     data.licPlace
-    //       .toLowerCase()
-    //       .includes(cyfsaSearchCriteria.licPlace.toLowerCase())
-    //   );
-    // };
-
-    //this.dataSource.filterPredicate = this.createFilter();
-
-    // this.dataSource.filterPredicate = (data: Licence, filter: string) => {
-    //   const dataStr = data.licNo; // + data.details.name + data.details.symbol + data.details.weight;
-
-    //   filter = cyfsaSearchCriteria.licNo;
-
-    //   console.log('filter: ', filter);
-
-    //   //return dataStr.indexOf(cyfsaSearchCriteria.licNo) != -1;
-
-    //   return data.licName.indexOf('z') != -1;
-    // };
-
-    //this.fieldListener();
-
     this.searchFormInit();
-    // Filter predicate used for filtering table per different columns
-    //this.dataSource.filterPredicate = this.getFilterPredicate();
   }
 
   getFilterPredicate() {
@@ -458,6 +252,9 @@ export class FilterpredicateComponent implements OnInit, AfterViewInit {
       const licNo = filterArray[0];
       const licType = filterArray[1];
       const licName = filterArray[2];
+      const licPlace = filterArray[3];
+      const licPhone = filterArray[4];
+      const licCondition = filterArray[5];
 
       const matchFilter = [];
 
@@ -465,6 +262,9 @@ export class FilterpredicateComponent implements OnInit, AfterViewInit {
       const columnLicNo = row.licNo;
       const columnLicType = row.licType;
       const columnLicName = row.licName;
+      const columnLicPlace = row.licPlace;
+      const columnLicPhone = row.licPhone;
+      const columnLicCondition = row.licCondition;
 
       // verify fetching data by our searching values
       const customFilterLicNo = columnLicNo
@@ -473,11 +273,23 @@ export class FilterpredicateComponent implements OnInit, AfterViewInit {
         .includes(licNo);
       const customFilterLicType = columnLicType.toLowerCase().includes(licType);
       const customFilterLicName = columnLicName.toLowerCase().includes(licName);
+      const customFilterLicPlace = columnLicPlace
+        .toLowerCase()
+        .includes(licPlace);
+      const customFilterLicPhone = columnLicPhone
+        .toLowerCase()
+        .includes(licPhone);
+      const customFilterLicCondition = columnLicCondition
+        .toLowerCase()
+        .includes(licCondition);
 
       // push boolean values into array
       matchFilter.push(customFilterLicNo);
       matchFilter.push(customFilterLicType);
       matchFilter.push(customFilterLicName);
+      matchFilter.push(customFilterLicPlace);
+      matchFilter.push(customFilterLicPhone);
+      matchFilter.push(customFilterLicCondition);
 
       // return true if all values in array is true
       // else return false
@@ -490,6 +302,9 @@ export class FilterpredicateComponent implements OnInit, AfterViewInit {
       licNo: new FormControl('', Validators.pattern('^[0-9 ]+$')),
       licType: new FormControl('', Validators.pattern('^[a-zA-Z0-9 ]+$')),
       licName: new FormControl('', Validators.pattern('^[a-zA-Z0-9 ]+$')),
+      licPlace: new FormControl('', Validators.pattern('^[a-zA-Z0-9 ]+$')),
+      licPhone: new FormControl(''),
+      licCondition: new FormControl('', Validators.pattern('^[a-zA-Z0-9 ]+$')),
     });
   }
 
@@ -497,22 +312,66 @@ export class FilterpredicateComponent implements OnInit, AfterViewInit {
     const formLicNo = this.form.get('licNo');
     const formLicType = this.form.get('licType');
     const formLicName = this.form.get('licName');
+    const formLicPlace = this.form.get('licPlace');
+    const formLicPhone = this.form.get('licPhone');
+    const formLicCondition = this.form.get('licCondition');
 
     this.licNo =
-      formLicNo === null || formLicNo.value === ''
+      formLicNo === null ||
+      formLicNo.value === undefined ||
+      formLicNo.value === null ||
+      formLicNo.value === ''
         ? ''
         : formLicNo.value.toString();
     this.licType =
-      formLicType === null || formLicType.value === ''
+      formLicType === null ||
+      formLicType.value === undefined ||
+      formLicType.value === null ||
+      formLicType.value === ''
         ? ''
         : formLicType.value.toString();
     this.licName =
-      formLicName === null || formLicName.value === ''
+      formLicName === null ||
+      formLicName.value === undefined ||
+      formLicName.value === null ||
+      formLicName.value === ''
         ? ''
         : formLicName.value.toString();
+    this.licPlace =
+      formLicPlace === null ||
+      formLicPlace.value === undefined ||
+      formLicPlace.value === null ||
+      formLicPlace.value === ''
+        ? ''
+        : formLicPlace.value.toString();
+    this.licPhone =
+      formLicPhone === null ||
+      formLicPhone.value === undefined ||
+      formLicPhone.value === null ||
+      formLicPhone.value === ''
+        ? ''
+        : formLicPhone.value.toString();
+    this.licCondition =
+      formLicCondition === null ||
+      formLicCondition.value === undefined ||
+      formLicCondition.value === null ||
+      formLicCondition.value === ''
+        ? ''
+        : formLicCondition.value.toString();
 
     // create string of our searching values and split if by '$'
-    const filterValue = this.licNo + '$' + this.licType + '$' + this.licName;
+    const filterValue =
+      this.licNo +
+      '$' +
+      this.licType +
+      '$' +
+      this.licName +
+      '$' +
+      this.licPlace +
+      '$' +
+      this.licPhone +
+      '$' +
+      this.licCondition;
     console.log('filterValue: ', filterValue);
 
     this.dataSource.filter = filterValue.trim().toLowerCase();
