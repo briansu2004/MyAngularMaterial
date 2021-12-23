@@ -30,7 +30,7 @@ import {
   faSortDown,
   faSortUp,
 } from '@fortawesome/free-solid-svg-icons';
-import { LicConditions } from 'src/app/shared/constants';
+import { LicConditions, LicPlaces, LicTypes } from 'src/app/shared/constants';
 import { LoaderService } from 'src/app/services/loader.service';
 import { CyfsaSearchCriteria } from 'src/app/models/search_results';
 
@@ -75,6 +75,8 @@ export class FilterpredicateComponent implements OnInit, AfterViewInit {
   faSortUp = faSortUp;
   faSortDown = faSortDown;
 
+  licTypes = LicTypes;
+  licPlaces = LicPlaces;
   licConditions = LicConditions;
 
   hasExpanded: boolean = false;
@@ -300,11 +302,17 @@ export class FilterpredicateComponent implements OnInit, AfterViewInit {
   searchFormInit() {
     this.form = new FormGroup({
       licNo: new FormControl('', Validators.pattern('^[0-9 ]+$')),
-      licType: new FormControl('', Validators.pattern('^[a-zA-Z0-9 ]+$')),
+      licType: new FormControl('', Validators.pattern("^[a-zA-Z0-9' ]+$")),
       licName: new FormControl('', Validators.pattern('^[a-zA-Z0-9 ]+$')),
-      licPlace: new FormControl('', Validators.pattern('^[a-zA-Z0-9 ]+$')),
-      licPhone: new FormControl(''),
-      licCondition: new FormControl('', Validators.pattern('^[a-zA-Z0-9 ]+$')),
+      licPlace: new FormControl('', Validators.pattern("^[a-zA-Z0-9' ]+$")),
+      //^[0-9][0-9-]+[0-9]$
+      //^((\\+91-?)|0)?[0-9]{10}$
+      //^(\([0-9]{3}\)|[0-9]{3}-)[0-9]{3}-[0-9]{4}$
+      licPhone: new FormControl(
+        '',
+        Validators.pattern('^(([0-9]{3})|[0-9]{3}-)[0-9]{3}-[0-9]{4}$')
+      ),
+      licCondition: new FormControl('', Validators.pattern("^[a-zA-Z0-9' ]+$")),
     });
   }
 

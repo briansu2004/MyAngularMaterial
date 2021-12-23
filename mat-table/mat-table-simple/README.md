@@ -507,8 +507,9 @@ git checkout -b v0.12_folder main
 git checkout -b v0.13_mock main
 git checkout -b v0.14_async_load main
 git checkout -b v0.15_search main
-
 git checkout -b v0.16_filterpredicate main
+git checkout -b v0.17_filterpredicateV2 main
+git checkout -b v0.18_filterpredicateV3 main
 
 git checkout main
 git branch -a
@@ -940,12 +941,6 @@ Number(true)
 ### ...
 
 ## TODO
-
-- Mat-Table filter by column
-
-filterPredicate ?
-
-https://stackoverflow.com/questions/50264911/material-table-datasource-filter-with-column-value
 
 - @ViewChild
 
