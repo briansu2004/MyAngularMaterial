@@ -18,6 +18,9 @@ import { MockComponent } from './components/mock/mock.component';
 import { AsyncLoadComponent } from './components/async-load/async-load.component';
 import { SearchComponent } from './components/search/search.component';
 import { FilterpredicateComponent } from './components/filterpredicate/filterpredicate.component';
+import { OdsComponent } from './components/ods/ods.component';
+import { OdsheaderdefaultComponent } from './components/odsheaderdefault/odsheaderdefault.component';
+import { OdsheaderontarioComponent } from './components/odsheaderontario/odsheaderontario.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -37,6 +40,9 @@ const routes: Routes = [
   { path: 'asyncload', component: AsyncLoadComponent },
   { path: 'search', component: SearchComponent },
   { path: 'flterpredicate', component: FilterpredicateComponent },
+  { path: 'odsheaderdefault', component: OdsheaderdefaultComponent },
+  { path: 'odsheaderontario', component: OdsheaderontarioComponent },
+  { path: 'ods', component: OdsComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: PagenotfoundComponent },
 ];
@@ -65,4 +71,7 @@ export const routingComponents = [
   AsyncLoadComponent,
   SearchComponent,
   FilterpredicateComponent,
+  OdsComponent,
+  OdsheaderdefaultComponent,
+  OdsheaderontarioComponent,
 ];

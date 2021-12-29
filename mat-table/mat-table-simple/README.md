@@ -293,6 +293,10 @@ ng g c components\search --dry-run
 ng g c components\search
 ng g c components\filterpredicate --dry-run
 ng g c components\filterpredicate
+ng g c components\odsheaderdefault
+ng g c components\odsheaderontario
+
+ng g c components\ods
 ```
 
 ## Json-Server mock
