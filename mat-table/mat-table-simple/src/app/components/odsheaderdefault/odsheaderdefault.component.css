@@ -1,5 +1,3 @@
-/* @import ("https://designsystem.ontario.ca/components/raw/header/header.css"); */
-
 .ontario-header-button:focus {
   box-shadow: 0 0 0 4px #009adb;
   outline: 4px solid transparent;

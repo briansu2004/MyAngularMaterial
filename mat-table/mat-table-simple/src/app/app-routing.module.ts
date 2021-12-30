@@ -21,6 +21,7 @@ import { FilterpredicateComponent } from './components/filterpredicate/filterpre
 import { OdsComponent } from './components/ods/ods.component';
 import { OdsheaderdefaultComponent } from './components/odsheaderdefault/odsheaderdefault.component';
 import { OdsheaderontarioComponent } from './components/odsheaderontario/odsheaderontario.component';
+import { OdsfooterdefaultComponent } from './components/odsfooterdefault/odsfooterdefault.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -42,6 +43,7 @@ const routes: Routes = [
   { path: 'flterpredicate', component: FilterpredicateComponent },
   { path: 'odsheaderdefault', component: OdsheaderdefaultComponent },
   { path: 'odsheaderontario', component: OdsheaderontarioComponent },
+  { path: 'odsfooterdefault', component: OdsfooterdefaultComponent },
   { path: 'ods', component: OdsComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: PagenotfoundComponent },
@@ -74,4 +76,5 @@ export const routingComponents = [
   OdsComponent,
   OdsheaderdefaultComponent,
   OdsheaderontarioComponent,
+  OdsfooterdefaultComponent,
 ];

@@ -295,6 +295,7 @@ ng g c components\filterpredicate --dry-run
 ng g c components\filterpredicate
 ng g c components\odsheaderdefault
 ng g c components\odsheaderontario
+ng g c components\odsfooterdefault
 
 ng g c components\ods
 ```
@@ -514,6 +515,10 @@ git checkout -b v0.15_search main
 git checkout -b v0.16_filterpredicate main
 git checkout -b v0.17_filterpredicateV2 main
 git checkout -b v0.18_filterpredicateV3 main
+git checkout -b v0.19_ODS_header_default main
+git checkout -b v0.20_ODS_header_ontario_wip main
+git checkout -b v0.21_ODS_footder_default main
+
 
 git checkout main
 git branch -a
