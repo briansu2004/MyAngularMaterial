@@ -11,7 +11,8 @@ import { LoaderService } from './services/loader.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'mat-table-simple';
+  //title = 'mat-table-simple';
+  title = 'CYSFA';
 
   constructor(private loader: LoaderService, @Inject(DOCUMENT) document: any) {}
 }

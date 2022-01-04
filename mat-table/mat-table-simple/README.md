@@ -296,8 +296,76 @@ ng g c components\filterpredicate
 ng g c components\odsheaderdefault
 ng g c components\odsheaderontario
 ng g c components\odsfooterdefault
-
+ng g c components\newhome
+ng g c components\mockup
 ng g c components\ods
+ng g c components\searchodsheader
+```
+
+## Logs / Branches
+
+```dos
+git checkout -b v0.01_get_started main
+git checkout -b v0.02_styling main
+git checkout -b v0.03_row_template main
+git checkout -b v0.04_pagination main
+git checkout -b v0.05_sorting main
+git checkout -b v0.06_pagesort_v1 main
+git checkout -b v0.07_filter main
+git checkout -b v0.08_selection main
+git checkout -b v0.09_footer main
+git checkout -b v0.10_sticky main
+git checkout -b v0.11_flex main
+git checkout -b v0.12_folder main
+git checkout -b v0.13_mock main
+git checkout -b v0.14_async_load main
+git checkout -b v0.15_search main
+git checkout -b v0.16_filterpredicate main
+git checkout -b v0.17_filterpredicateV2 main
+git checkout -b v0.18_filterpredicateV3 main
+git checkout -b v0.19_ODS_header_default main
+git checkout -b v0.20_ODS_header_ontario_wip main
+git checkout -b v0.21_ODS_footder_default main
+
+git checkout -b v0.22_Search_ODS_header main
+
+
+git checkout main
+git branch -a
+git branch
+
+git push --all
+```
+
+```dos
+C:\Code\MyAngularMaterial\mat-table\mat-table-simple>git branch -a
+* main
+  v0.01_get_started
+  v0.01_styling
+  v0.03_row_template
+  v0.04_pagination
+  v0.05_sorting
+  v0.06_pagesort_v1
+  v0.07_filter
+  v0.09_footer
+  v0.10_sticky
+  v0.11_flex
+  v0.12_folder
+  v0.13_mock
+  v0.14_async_load
+  remotes/origin/main
+  remotes/origin/v0.01_get_started
+  remotes/origin/v0.01_styling
+  remotes/origin/v0.03_row_template
+  remotes/origin/v0.04_pagination
+  remotes/origin/v0.05_sorting
+  remotes/origin/v0.06_pagesort_v1
+  remotes/origin/v0.07_filter
+  remotes/origin/v0.09_footer
+  remotes/origin/v0.10_sticky
+  remotes/origin/v0.11_flex
+  remotes/origin/v0.12_folder
+  remotes/origin/v0.13_mock
 ```
 
 ## Json-Server mock
@@ -492,70 +560,6 @@ mypage.component.ts
         this.loaderService.isLoading.next(false);
       }
     );
-```
-
-## Logs / Branches
-
-```dos
-git checkout -b v0.01_get_started main
-git checkout -b v0.02_styling main
-git checkout -b v0.03_row_template main
-git checkout -b v0.04_pagination main
-git checkout -b v0.05_sorting main
-git checkout -b v0.06_pagesort_v1 main
-git checkout -b v0.07_filter main
-git checkout -b v0.08_selection main
-git checkout -b v0.09_footer main
-git checkout -b v0.10_sticky main
-git checkout -b v0.11_flex main
-git checkout -b v0.12_folder main
-git checkout -b v0.13_mock main
-git checkout -b v0.14_async_load main
-git checkout -b v0.15_search main
-git checkout -b v0.16_filterpredicate main
-git checkout -b v0.17_filterpredicateV2 main
-git checkout -b v0.18_filterpredicateV3 main
-git checkout -b v0.19_ODS_header_default main
-git checkout -b v0.20_ODS_header_ontario_wip main
-git checkout -b v0.21_ODS_footder_default main
-
-
-git checkout main
-git branch -a
-git branch
-
-git push --all
-```
-
-```dos
-C:\Code\MyAngularMaterial\mat-table\mat-table-simple>git branch -a
-* main
-  v0.01_get_started
-  v0.01_styling
-  v0.03_row_template
-  v0.04_pagination
-  v0.05_sorting
-  v0.06_pagesort_v1
-  v0.07_filter
-  v0.09_footer
-  v0.10_sticky
-  v0.11_flex
-  v0.12_folder
-  v0.13_mock
-  v0.14_async_load
-  remotes/origin/main
-  remotes/origin/v0.01_get_started
-  remotes/origin/v0.01_styling
-  remotes/origin/v0.03_row_template
-  remotes/origin/v0.04_pagination
-  remotes/origin/v0.05_sorting
-  remotes/origin/v0.06_pagesort_v1
-  remotes/origin/v0.07_filter
-  remotes/origin/v0.09_footer
-  remotes/origin/v0.10_sticky
-  remotes/origin/v0.11_flex
-  remotes/origin/v0.12_folder
-  remotes/origin/v0.13_mock
 ```
 
 ## Screenshot

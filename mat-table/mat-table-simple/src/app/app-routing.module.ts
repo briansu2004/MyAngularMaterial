@@ -22,6 +22,9 @@ import { OdsComponent } from './components/ods/ods.component';
 import { OdsheaderdefaultComponent } from './components/odsheaderdefault/odsheaderdefault.component';
 import { OdsheaderontarioComponent } from './components/odsheaderontario/odsheaderontario.component';
 import { OdsfooterdefaultComponent } from './components/odsfooterdefault/odsfooterdefault.component';
+import { NewhomeComponent } from './components/newhome/newhome.component';
+import { MockupComponent } from './components/mockup/mockup.component';
+import { SearchodsheaderComponent } from './components/searchodsheader/searchodsheader.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -45,6 +48,10 @@ const routes: Routes = [
   { path: 'odsheaderontario', component: OdsheaderontarioComponent },
   { path: 'odsfooterdefault', component: OdsfooterdefaultComponent },
   { path: 'ods', component: OdsComponent },
+  { path: 'newhome', component: NewhomeComponent },
+  { path: 'mockup', component: MockupComponent },
+  { path: 'searchodsheader', component: SearchodsheaderComponent },
+
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: PagenotfoundComponent },
 ];
@@ -77,4 +84,7 @@ export const routingComponents = [
   OdsheaderdefaultComponent,
   OdsheaderontarioComponent,
   OdsfooterdefaultComponent,
+  NewhomeComponent,
+  MockupComponent,
+  SearchodsheaderComponent,
 ];
