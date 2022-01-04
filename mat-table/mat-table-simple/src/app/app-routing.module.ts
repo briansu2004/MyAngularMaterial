@@ -52,7 +52,8 @@ const routes: Routes = [
   { path: 'mockup', component: MockupComponent },
   { path: 'searchodsheader', component: SearchodsheaderComponent },
 
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', redirectTo: 'searchodsheader', pathMatch: 'full' },
+  // { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: PagenotfoundComponent },
 ];
 

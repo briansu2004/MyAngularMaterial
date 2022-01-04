@@ -326,7 +326,6 @@ git checkout -b v0.18_filterpredicateV3 main
 git checkout -b v0.19_ODS_header_default main
 git checkout -b v0.20_ODS_header_ontario_wip main
 git checkout -b v0.21_ODS_footder_default main
-
 git checkout -b v0.22_Search_ODS_header main
 
 
@@ -769,6 +768,7 @@ Always provide an accessible label for your tables via aria-label or aria-labell
 
 ### Tables with display: flex
 
+```
 <table mat-table> ==> <mat-table>
 
 <tr mat-row> ==> <mat-row>
@@ -778,6 +778,7 @@ Always provide an accessible label for your tables via aria-label or aria-labell
 <th mat-header-cell> ==> <mat-header-cell>
 
 <th mat-footer-cell> ==> <mat-footer-cell>
+```
 
 ### TakeUntil
 
@@ -928,6 +929,8 @@ function() {
 }
 ```
 
+Check this -
+
 ```
 !!null
 false
@@ -949,6 +952,129 @@ Number(false)
 
 Number(true)
 1
+```
+
+### Angular Material Colors
+
+- A primary palette for the color that appears most frequently throughout your application
+- An accent, or secondary, palette used to selectively highlight key parts of your UI
+- A warn, or error, palette used for warnings and error states
+
+### ng build
+
+```
+ng build
+```
+
+![](image/README/ng_build_result.png)
+
+```
+C:\Code\MyAngularMaterial\mat-table\mat-table-simple>ng build
+✔ Browser application bundle generation complete.
+✔ Copying assets complete.
+⠋ Generating index html...1 rules skipped due to selector errors:
+  .custom-file-input:lang(en)~.custom-file-label -> unmatched pseudo-class :lang
+✔ Index html generation complete.
+
+Initial Chunk Files               | Names         |      Size
+main.3bc94fa6a4d19fef1e01.js      | main          | 862.71 kB
+styles.825ecebbce0e7589a41f.css   | styles        | 214.75 kB
+polyfills.babeb6271f15e02eb953.js | polyfills     |  36.88 kB
+runtime.5062c7efbe66c9c76a18.js   | runtime       | 889 bytes
+
+                                  | Initial Total |   1.09 MB
+
+Build at: 2022-01-04T01:25:36.570Z - Hash: 1c0cc71f86e6660c176d - Time: 61191ms
+
+Warning: C:/Code/MyAngularMaterial/mat-table/mat-table-simple/src/app/components/odsfooterdefault/odsfooterdefault.component.css exceeded maximum budget. Budget 2.00 kB was not met by 3.99 kB with a total of 5.99 kB.
+
+Warning: C:/Code/MyAngularMaterial/mat-table/mat-table-simple/src/app/components/odsheaderdefault/odsheaderdefault.component.css exceeded maximum budget. Budget 2.00 kB was not met by 4.48 kB with a total of 6.48 kB.
+
+Warning: C:/Code/MyAngularMaterial/mat-table/mat-table-simple/src/app/components/odsheaderontario/odsheaderontario.component.css exceeded maximum budget. Budget 2.00 kB was not met by 4.48 kB with a total of 6.48 kB.
+
+Warning: C:/Code/MyAngularMaterial/mat-table/mat-table-simple/src/app/components/searchodsheader/searchodsheader.component.css exceeded maximum budget. Budget 2.00 kB was not met by 5.05 kB with a total of 7.05 kB.
+
+Warning: initial exceeded maximum budget. Budget 500.00 kB was not met by 615.21 kB with a total of 1.09 MB.
+```
+
+Use LiveServer to preview.
+
+```
+http://127.0.0.1:5500/
+```
+
+### Live Server
+
+https://github.com/ritwickdey/vscode-live-server/blob/master/docs/faqs.md
+
+Create a .vscode folder in the root of project. Inside of .vscode folder create a json file named settings.json. Inside of the settings.json, type following key-value pairs. By the way you'll get intelli-sense.
+
+```
+{
+  "liveServer.settings.port": 4500,
+  "liveServer.settings.root": "/dist/mat-table-simple",
+  "liveServer.settings.CustomBrowser": "chrome",
+  "liveServer.settings.AdvanceCustomBrowserCmdLine": "chrome --incognito --remote-debugging-port=9222",
+  "liveServer.settings.NoBrowser": false,
+  "liveServer.settings.ignoreFiles": [".vscode/**", "**/*.scss", "**/*.sass"]
+}
+```
+
+![](image/README/AngularBuild+LiveServer.png)
+
+## Troubleshooting
+
+### ng build issue - Error: css exceeded maximum budget. Budget 4.00 kB was not met by 3.05 kB with a total of 7.05 kB.
+
+Issue
+
+```
+C:\Code\MyAngularMaterial\mat-table\mat-table-simple>ng build
+✔ Browser application bundle generation complete.
+
+Warning: C:/Code/MyAngularMaterial/mat-table/mat-table-simple/src/app/components/odsfooterdefault/odsfooterdefault.component.css exceeded maximum budget. Budget 2.00 kB was not met by 3.99 kB with a total of 5.99 kB.
+
+Warning: C:/Code/MyAngularMaterial/mat-table/mat-table-simple/src/app/components/odsheaderdefault/odsheaderdefault.component.css exceeded maximum budget. Budget 2.00 kB was not met by 4.48 kB with a total of 6.48 kB.
+
+Warning: C:/Code/MyAngularMaterial/mat-table/mat-table-simple/src/app/components/odsheaderontario/odsheaderontario.component.css exceeded maximum budget. Budget 2.00 kB was not met by 4.48 kB with a total of 6.48 kB.
+
+Warning: C:/Code/MyAngularMaterial/mat-table/mat-table-simple/src/app/components/searchodsheader/searchodsheader.component.css exceeded
+maximum budget. Budget 2.00 kB was not met by 5.05 kB with a total of 7.05 kB.
+
+
+
+Error: C:/Code/MyAngularMaterial/mat-table/mat-table-simple/src/app/components/odsfooterdefault/odsfooterdefault.component.css exceeded
+maximum budget. Budget 4.00 kB was not met by 1.99 kB with a total of 5.99 kB.
+
+Error: C:/Code/MyAngularMaterial/mat-table/mat-table-simple/src/app/components/odsheaderdefault/odsheaderdefault.component.css exceeded
+maximum budget. Budget 4.00 kB was not met by 2.48 kB with a total of 6.48 kB.
+
+Error: C:/Code/MyAngularMaterial/mat-table/mat-table-simple/src/app/components/odsheaderontario/odsheaderontario.component.css exceeded
+maximum budget. Budget 4.00 kB was not met by 2.48 kB with a total of 6.48 kB.
+
+Error: C:/Code/MyAngularMaterial/mat-table/mat-table-simple/src/app/components/searchodsheader/searchodsheader.component.css exceeded maximum budget. Budget 4.00 kB was not met by 3.05 kB with a total of 7.05 kB.
+```
+
+Solution
+
+Angular.json
+
+```
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+```
+
+-->
+
+```
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "10kb"
+                }
 ```
 
 ### ...
