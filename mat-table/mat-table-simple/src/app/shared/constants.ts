@@ -1,7 +1,10 @@
 export const LicTypes: string[] = [
   'NA',
+  'Care',
   "Children's Residence",
   'Foster Care Agency',
+  "Adult's Residence",
+  "Someone's Residence",
 ];
 
 export const LicPlaces: string[] = [

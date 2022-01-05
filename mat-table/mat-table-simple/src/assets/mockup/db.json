@@ -84,7 +84,7 @@
     {
       "licId": 10,
       "licNo": "0000178",
-      "licType": "NA",
+      "licType": "Foster Care Agency",
       "licName": "Good Shepherd Centre Hamilton",
       "licPlace": "Hamilton",
       "licPhone": "416-528-5877",
@@ -102,7 +102,7 @@
     {
       "licId": 12,
       "licNo": "0000180",
-      "licType": "Foster Care Agency",
+      "licType": "Children's Residence",
       "licName": "Good Shepherd Centre Hamilton",
       "licPlace": "Hamilton",
       "licPhone": "647-528-5877",
@@ -111,7 +111,7 @@
     {
       "licId": 13,
       "licNo": "0000181",
-      "licType": "NA",
+      "licType": "Children's Residence",
       "licName": "Good Shepherd Centre Hamilton",
       "licPlace": "Toronto",
       "licPhone": "905-528-5877",
@@ -133,42 +133,6 @@
       "licName": "Shepherd",
       "licPlace": "Markham",
       "licPhone": "905-573-5877",
-      "licCondition": "View conditions"
-    },
-    {
-      "licId": 16,
-      "licNo": "0000184",
-      "licType": "Foster Care Agency",
-      "licName": "Hatts",
-      "licPlace": "Hamilton",
-      "licPhone": "647-528-5877",
-      "licCondition": "View conditions"
-    },
-    {
-      "licId": 17,
-      "licNo": "0000185",
-      "licType": "Children's Residence",
-      "licName": "Shepherd",
-      "licPlace": "Markham",
-      "licPhone": "905-573-5877",
-      "licCondition": "View conditions"
-    },
-    {
-      "licId": 18,
-      "licNo": "0000186",
-      "licType": "Foster Care Agency",
-      "licName": "Hello",
-      "licPlace": "Hamilton",
-      "licPhone": "1-888-528-5877",
-      "licCondition": "NA"
-    },
-    {
-      "licId": 19,
-      "licNo": "0000187",
-      "licType": "Children's Residence",
-      "licName": "Shepherd",
-      "licPlace": "Markham",
-      "licPhone": "437-573-5877",
       "licCondition": "View conditions"
     }
   ]
