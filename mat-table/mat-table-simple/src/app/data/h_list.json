@@ -1,0 +1,674 @@
+[
+  {
+    "licenseNumber": "LI00021",
+    "licenseType": "Monitoring",
+    "licenseName": "Argus Residence for Young People",
+    "licenseCity": "Cambridge",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular with conditions"
+  },
+  {
+    "licenseNumber": "LI00021",
+    "licenseType": "Renewal",
+    "licenseName": "Argus Residence for Young People",
+    "licenseCity": "Cambridge",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular with conditions"
+  },
+  {
+    "licenseNumber": "LI00021",
+    "licenseType": "Renewal",
+    "licenseName": "Argus Residence for Young People",
+    "licenseCity": "Cambridge",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular with conditions"
+  },
+  {
+    "licenseNumber": "2849",
+    "licenseType": "Monitoring",
+    "licenseName": "Jen's Place",
+    "licenseCity": "Alliston",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular"
+  },
+  {
+    "licenseNumber": "2849",
+    "licenseType": "Renewal",
+    "licenseName": "Jen's Place",
+    "licenseCity": "Alliston",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular"
+  },
+  {
+    "licenseNumber": "898",
+    "licenseType": "Renewal",
+    "licenseName": "360kids Support Services - Hamilton Hall",
+    "licenseCity": "Markham",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular"
+  },
+  {
+    "licenseNumber": "898",
+    "licenseType": "Renewal",
+    "licenseName": "360kids Support Services - Oak Lea Residence",
+    "licenseCity": "Markham",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular"
+  },
+  {
+    "licenseNumber": "43-0008",
+    "licenseType": "Renewal",
+    "licenseName": "The Sunbeam Lodge - Adonai Residential Services",
+    "licenseCity": "Kitchener",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular"
+  },
+  {
+    "licenseNumber": "6853",
+    "licenseType": "Change Request",
+    "licenseName": "Avalon Lighthouse 2 Program",
+    "licenseCity": "Rockwood",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular"
+  },
+  {
+    "licenseNumber": "6853",
+    "licenseType": "Renewal",
+    "licenseName": "Avalon Lighthouse 2 Program",
+    "licenseCity": "Rockwood",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular"
+  },
+  {
+    "licenseNumber": "6836",
+    "licenseType": "Monitoring",
+    "licenseName": "Bob Rumball Canadian Centre of Excellence for the Deaf - Drury Program",
+    "licenseCity": "Milton",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular with conditions"
+  },
+  {
+    "licenseNumber": "6836",
+    "licenseType": "Renewal",
+    "licenseName": "Bob Rumball Canadian Centre of Excellence for the Deaf - Drury Program",
+    "licenseCity": "Milton",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular with conditions"
+  },
+  {
+    "licenseNumber": "6849",
+    "licenseType": "Monitoring",
+    "licenseName": "CBI - Haines Road Children's Residence",
+    "licenseCity": "Newmarket",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular"
+  },
+  {
+    "licenseNumber": "6849",
+    "licenseType": "Renewal",
+    "licenseName": "CBI - Haines Road Children's Residence",
+    "licenseCity": "Newmarket",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular"
+  },
+  {
+    "licenseNumber": "6849",
+    "licenseType": "Monitoring",
+    "licenseName": "CBI Health Group",
+    "licenseCity": "East Gwillimbury",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular"
+  },
+  {
+    "licenseNumber": "6849",
+    "licenseType": "Renewal",
+    "licenseName": "CBI Health Group",
+    "licenseCity": "East Gwillimbury",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular"
+  },
+  {
+    "licenseNumber": "1984",
+    "licenseType": "Monitoring",
+    "licenseName": "Cedar Heights (Stouffville) Residential Living",
+    "licenseCity": "Stouffville",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular with conditions"
+  },
+  {
+    "licenseNumber": "1984",
+    "licenseType": "Renewal",
+    "licenseName": "Cedar Heights (Stouffville) Residential Living",
+    "licenseCity": "Stouffville",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular with conditions"
+  },
+  {
+    "licenseNumber": "1697",
+    "licenseType": "Renewal",
+    "licenseName": "Cedar Heights Residential Living",
+    "licenseCity": "Tottenham",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular with conditions"
+  },
+  {
+    "licenseNumber": "1697",
+    "licenseType": "Renewal",
+    "licenseName": "Cedar Heights Residential Living - Markham",
+    "licenseCity": "Markham",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular with conditions"
+  },
+  {
+    "licenseNumber": "1697",
+    "licenseType": "Renewal",
+    "licenseName": "Cedar Heights - Orangeville",
+    "licenseCity": "Orangeville",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular with conditions"
+  },
+  {
+    "licenseNumber": "1697",
+    "licenseType": "Renewal",
+    "licenseName": "Cedar Heights - Mono",
+    "licenseCity": "",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular with conditions"
+  },
+  {
+    "licenseNumber": "1083",
+    "licenseType": "Renewal",
+    "licenseName": "Central West Specialized Development Services - House 5 Respite Care",
+    "licenseCity": "Oakville",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular with conditions"
+  },
+  {
+    "licenseNumber": "5484",
+    "licenseType": "Renewal",
+    "licenseName": "The CAS of the Regional Municipality of Waterloo - 300 Langford",
+    "licenseCity": "Waterloo",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular"
+  },
+  {
+    "licenseNumber": "6754",
+    "licenseType": "Renewal",
+    "licenseName": "Cornerstone Group Home Inc.",
+    "licenseCity": "Brampton",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular with conditions"
+  },
+  {
+    "licenseNumber": "4236",
+    "licenseType": "Monitoring",
+    "licenseName": "Marjorie Amos Residence",
+    "licenseCity": "Brampton",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular"
+  },
+  {
+    "licenseNumber": "4236",
+    "licenseType": "Renewal",
+    "licenseName": "Marjorie Amos Residence",
+    "licenseCity": "Brampton",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular"
+  },
+  {
+    "licenseNumber": "6048",
+    "licenseType": "Renewal",
+    "licenseName": "Empower Simcoe (21 Broadfoot Road)",
+    "licenseCity": "Barrie",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular"
+  },
+  {
+    "licenseNumber": "6048",
+    "licenseType": "Renewal",
+    "licenseName": "Empower Simcoe (35 Bishop Drive)",
+    "licenseCity": "Barrie",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular"
+  },
+  {
+    "licenseNumber": "6835",
+    "licenseType": "Renewal",
+    "licenseName": "ErinoakKids Centre for Treatment and Development - 10145 McVean Drive",
+    "licenseCity": "Brampton",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular with conditions"
+  },
+  {
+    "licenseNumber": "Feb-43",
+    "licenseType": "Renewal",
+    "licenseName": "Everymind Mental Health Services Caledon South ResIdence",
+    "licenseCity": "Caledon",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular"
+  },
+  {
+    "licenseNumber": "4242",
+    "licenseType": "Monitoring",
+    "licenseName": "The Salvation Army Correctional & Justice Services - Cuthbert House",
+    "licenseCity": "Brampton",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular"
+  },
+  {
+    "licenseNumber": "4242",
+    "licenseType": "Renewal",
+    "licenseName": "The Salvation Army Correctional & Justice Services - Cuthbert House",
+    "licenseCity": "Brampton",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular"
+  },
+  {
+    "licenseNumber": "1902",
+    "licenseType": "Renewal",
+    "licenseName": "Hatts Off Inc.- Ellis Residence",
+    "licenseCity": "Waterloo",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular with conditions"
+  },
+  {
+    "licenseNumber": "43-0063",
+    "licenseType": "Renewal",
+    "licenseName": "Hopewell Children's Homes Inc. -  Admin Office - Respite 5651-B #86 MCSS DS",
+    "licenseCity": "Ariss",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular with conditions"
+  },
+  {
+    "licenseNumber": "6398",
+    "licenseType": "Renewal",
+    "licenseName": "The Little Lake Residence",
+    "licenseCity": "Barrie",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular with conditions"
+  },
+  {
+    "licenseNumber": "6803",
+    "licenseType": "Renewal",
+    "licenseName": "Humphrey's Family Tree Residence",
+    "licenseCity": "Brampton",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular"
+  },
+  {
+    "licenseNumber": "6838",
+    "licenseType": "Renewal",
+    "licenseName": "Kinark Child & Family Services - Vanier Residential Services",
+    "licenseCity": "Mississauga",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular"
+  },
+  {
+    "licenseNumber": "6838",
+    "licenseType": "Renewal",
+    "licenseName": "KINARK CHILD AND FAMILY SRVC CORP Gorham",
+    "licenseCity": "Newmarket",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular"
+  },
+  {
+    "licenseNumber": "6838",
+    "licenseType": "Renewal",
+    "licenseName": "Kinark Child and Family Services: Simcoe - Barrie - Grove St - CFI",
+    "licenseCity": "Barrie",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular"
+  },
+  {
+    "licenseNumber": "3340",
+    "licenseType": "Renewal",
+    "licenseName": "Kushions Inc.",
+    "licenseCity": "Barrie",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular"
+  },
+  {
+    "licenseNumber": "3340",
+    "licenseType": "Renewal",
+    "licenseName": "Kushions II",
+    "licenseCity": "Barrie",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular"
+  },
+  {
+    "licenseNumber": "2092",
+    "licenseType": "Renewal",
+    "licenseName": "K-W Habilitation Services - Forest Hill (MCYS)",
+    "licenseCity": "Kitchener",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular"
+  },
+  {
+    "licenseNumber": "5617",
+    "licenseType": "Monitoring",
+    "licenseName": "Latitude Child and Youth Services",
+    "licenseCity": "Oakville",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular with conditions"
+  },
+  {
+    "licenseNumber": "5617",
+    "licenseType": "Renewal",
+    "licenseName": "Latitude Child and Youth Services",
+    "licenseCity": "Oakville",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular with conditions"
+  },
+  {
+    "licenseNumber": "5617",
+    "licenseType": "Monitoring",
+    "licenseName": "Latitude 2",
+    "licenseCity": "Oakville",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular with conditions"
+  },
+  {
+    "licenseNumber": "5617",
+    "licenseType": "Renewal",
+    "licenseName": "Latitude 2",
+    "licenseCity": "Oakville",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular with conditions"
+  },
+  {
+    "licenseNumber": "4181",
+    "licenseType": "Monitoring",
+    "licenseName": "LUTHERWOOD",
+    "licenseCity": "Waterloo",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular"
+  },
+  {
+    "licenseNumber": "4181",
+    "licenseType": "Renewal",
+    "licenseName": "LUTHERWOOD",
+    "licenseCity": "Waterloo",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular"
+  },
+  {
+    "licenseNumber": "4181",
+    "licenseType": "Renewal",
+    "licenseName": "Betty Thompson Youth Centre - Safe Haven Shelter - 41 Weber",
+    "licenseCity": "Kitchener",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular"
+  },
+  {
+    "licenseNumber": "703",
+    "licenseType": "Renewal",
+    "licenseName": "New Path Youth & Family Counselling Services of Simcoe County - Deerview",
+    "licenseCity": "Cookstown",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular with conditions"
+  },
+  {
+    "licenseNumber": "703",
+    "licenseType": "Renewal",
+    "licenseName": "New Path Youth & Family Services of Simcoe County - Pinecrest",
+    "licenseCity": "Cookstown",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular with conditions"
+  },
+  {
+    "licenseNumber": "1125",
+    "licenseType": "Renewal",
+    "licenseName": "Oakdale Child & Family Services - Amber House",
+    "licenseCity": "Stouffville",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular"
+  },
+  {
+    "licenseNumber": "1125",
+    "licenseType": "Renewal",
+    "licenseName": "Oakdale Child & Family Services, Oakdale VI - Group - Sequoia House",
+    "licenseCity": "Barrie",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular"
+  },
+  {
+    "licenseNumber": "1125",
+    "licenseType": "Renewal",
+    "licenseName": "Oakdale Child & Family Services, Oakdale V  - Group - Cundles Residence",
+    "licenseCity": "Barrie",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular"
+  },
+  {
+    "licenseNumber": "1125",
+    "licenseType": "Renewal",
+    "licenseName": "Oakdale Child & Family Service - Minesing Residence",
+    "licenseCity": "Minesing",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular"
+  },
+  {
+    "licenseNumber": "1125",
+    "licenseType": "Monitoring",
+    "licenseName": "Oakdale Child & Family Services - St. Vincent - Group",
+    "licenseCity": "Midhurst",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular"
+  },
+  {
+    "licenseNumber": "1125",
+    "licenseType": "Renewal",
+    "licenseName": "Oakdale Child & Family Services - St. Vincent - Group",
+    "licenseCity": "Midhurst",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular"
+  },
+  {
+    "licenseNumber": "3510",
+    "licenseType": "Renewal",
+    "licenseName": "Parents for Community Living Kitchener-Waterloo Inc. - Malabar Home (MCYS)",
+    "licenseCity": "Waterloo",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular with conditions"
+  },
+  {
+    "licenseNumber": "3510",
+    "licenseType": "Renewal",
+    "licenseName": "Parents for Community Living Kitchener-Waterloo Inc. - Casey Dr. (MCYS)",
+    "licenseCity": "Kitchener",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular with conditions"
+  },
+  {
+    "licenseNumber": "43-0042",
+    "licenseType": "Monitoring",
+    "licenseName": "Pioneer Youth Services Associates - Albert Program",
+    "licenseCity": "Waterloo",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular with conditions"
+  },
+  {
+    "licenseNumber": "43-0042",
+    "licenseType": "Renewal",
+    "licenseName": "Pioneer Youth Services Associates - Albert Program",
+    "licenseCity": "Waterloo",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular with conditions"
+  },
+  {
+    "licenseNumber": "43-0042",
+    "licenseType": "Renewal",
+    "licenseName": "Pioneer Youth Services - Queens Program",
+    "licenseCity": "Kitchener",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular with conditions"
+  },
+  {
+    "licenseNumber": "43-0042",
+    "licenseType": "Renewal",
+    "licenseName": "Pioneer Youth Services - Lang Program",
+    "licenseCity": "Kitchener",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular with conditions"
+  },
+  {
+    "licenseNumber": "4184",
+    "licenseType": "Monitoring",
+    "licenseName": "Portage Ontario",
+    "licenseCity": "Elora",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular"
+  },
+  {
+    "licenseNumber": "4184",
+    "licenseType": "Renewal",
+    "licenseName": "Portage Ontario",
+    "licenseCity": "Elora",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular"
+  },
+  {
+    "licenseNumber": "4185",
+    "licenseType": "Monitoring",
+    "licenseName": "Ray of Hope - Secure Custody & Detention",
+    "licenseCity": "Petersburg",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular with conditions"
+  },
+  {
+    "licenseNumber": "4185",
+    "licenseType": "Renewal",
+    "licenseName": "Ray of Hope - Secure Custody & Detention",
+    "licenseCity": "Petersburg",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular with conditions"
+  },
+  {
+    "licenseNumber": "2222",
+    "licenseType": "Monitoring",
+    "licenseName": "Reach Out Centre for Kids - Aberdeen - 2262 Lakeshore",
+    "licenseCity": "Oakville",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular"
+  },
+  {
+    "licenseNumber": "2222",
+    "licenseType": "Renewal",
+    "licenseName": "Reach Out Centre for Kids - Aberdeen - 2262 Lakeshore",
+    "licenseCity": "Oakville",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular"
+  },
+  {
+    "licenseNumber": "6472",
+    "licenseType": "Renewal",
+    "licenseName": "Reena - Barhill",
+    "licenseCity": "Maple",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular"
+  },
+  {
+    "licenseNumber": "2486",
+    "licenseType": "Renewal",
+    "licenseName": "Timber Lane Residence",
+    "licenseCity": "Woodbridge",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular"
+  },
+  {
+    "licenseNumber": "43-0021",
+    "licenseType": "Renewal",
+    "licenseName": "Saint Monica House - 231 Herbert Street",
+    "licenseCity": "Waterloo",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular"
+  },
+  {
+    "licenseNumber": "6872",
+    "licenseType": "Renewal",
+    "licenseName": "Springwater Residential Centre",
+    "licenseCity": "Springwater",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular with conditions"
+  },
+  {
+    "licenseNumber": "2404",
+    "licenseType": "Renewal",
+    "licenseName": "Sunbeam Community and Developmental Services - Kingsdale GH",
+    "licenseCity": "Kitchener",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular with conditions"
+  },
+  {
+    "licenseNumber": "2404",
+    "licenseType": "Renewal",
+    "licenseName": "Sunbeam Community and Developmental Services - Sims GH",
+    "licenseCity": "Kitchener",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular with conditions"
+  },
+  {
+    "licenseNumber": "2404",
+    "licenseType": "Renewal",
+    "licenseName": "Sunbeam Community and Developmental Services - Vos GH",
+    "licenseCity": "Kitchener",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular with conditions"
+  },
+  {
+    "licenseNumber": "2404",
+    "licenseType": "Renewal",
+    "licenseName": "Sunbeam Community and Developmental Services - The Loft",
+    "licenseCity": "Kitchener",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular with conditions"
+  },
+  {
+    "licenseNumber": "2404",
+    "licenseType": "Renewal",
+    "licenseName": "Sunbeam Community and Developmental Services - The Apartment (MCYS)",
+    "licenseCity": "Kitchener",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular with conditions"
+  },
+  {
+    "licenseNumber": "2404",
+    "licenseType": "Renewal",
+    "licenseName": "Sunbeam Community and Developmental Services - Whaley GH",
+    "licenseCity": "Kitchener",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular with conditions"
+  },
+  {
+    "licenseNumber": "3068",
+    "licenseType": "Renewal",
+    "licenseName": "The Cedarbrook Society",
+    "licenseCity": "Milton",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular with conditions"
+  },
+  {
+    "licenseNumber": "2416",
+    "licenseType": "Renewal",
+    "licenseName": "TLK Residential Services - Destiny House",
+    "licenseCity": "Richmond Hill",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular"
+  },
+  {
+    "licenseNumber": "2416",
+    "licenseType": "Renewal",
+    "licenseName": "T.L.K. Residential Services - Springboard",
+    "licenseCity": "Richmond Hill",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular"
+  },
+  {
+    "licenseNumber": "827",
+    "licenseType": "Renewal",
+    "licenseName": "York Hills Centre for Children Youth and Families - Blue Hills Child and Family Services",
+    "licenseCity": "Aurora",
+    "licenseRegion": "Central",
+    "licenseCondition": "Regular with conditions"
+  }
+]

@@ -5,9 +5,9 @@
       "licNo": "LI00021",
       "licType": "Monitoring",
       "licName": "Argus Residence for Young People",
-      "licPlace": "Cambridge",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Cambridge",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular with conditions"
     },
     {
@@ -15,9 +15,9 @@
       "licNo": "LI00021",
       "licType": "Renewal",
       "licName": "Argus Residence for Young People",
-      "licPlace": "Cambridge",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Cambridge",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular with conditions"
     },
     {
@@ -25,9 +25,9 @@
       "licNo": "LI00021",
       "licType": "Renewal",
       "licName": "Argus Residence for Young People",
-      "licPlace": "Cambridge",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Cambridge",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular with conditions"
     },
     {
@@ -35,9 +35,9 @@
       "licNo": "2849",
       "licType": "Monitoring",
       "licName": "Jen's Place",
-      "licPlace": "Alliston",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Alliston",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular"
     },
     {
@@ -45,9 +45,9 @@
       "licNo": "2849",
       "licType": "Renewal",
       "licName": "Jen's Place",
-      "licPlace": "Alliston",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Alliston",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular"
     },
     {
@@ -55,9 +55,9 @@
       "licNo": "898",
       "licType": "Renewal",
       "licName": "360kids Support Services - Hamilton Hall",
-      "licPlace": "Markham",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Markham",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular"
     },
     {
@@ -65,9 +65,9 @@
       "licNo": "898",
       "licType": "Renewal",
       "licName": "360kids Support Services - Oak Lea Residence",
-      "licPlace": "Markham",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Markham",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular"
     },
     {
@@ -75,9 +75,9 @@
       "licNo": "43-0008",
       "licType": "Renewal",
       "licName": "The Sunbeam Lodge - Adonai Residential Services",
-      "licPlace": "Kitchener",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Kitchener",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular"
     },
     {
@@ -85,9 +85,9 @@
       "licNo": "6853",
       "licType": "Change Request",
       "licName": "Avalon Lighthouse 2 Program",
-      "licPlace": "Rockwood",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Rockwood",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular"
     },
     {
@@ -95,9 +95,9 @@
       "licNo": "6853",
       "licType": "Renewal",
       "licName": "Avalon Lighthouse 2 Program",
-      "licPlace": "Rockwood",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Rockwood",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular"
     },
     {
@@ -105,9 +105,9 @@
       "licNo": "6836",
       "licType": "Monitoring",
       "licName": "Bob Rumball Canadian Centre of Excellence for the Deaf - Drury Program",
-      "licPlace": "Milton",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Milton",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular with conditions"
     },
     {
@@ -115,9 +115,9 @@
       "licNo": "6836",
       "licType": "Renewal",
       "licName": "Bob Rumball Canadian Centre of Excellence for the Deaf - Drury Program",
-      "licPlace": "Milton",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Milton",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular with conditions"
     },
     {
@@ -125,9 +125,9 @@
       "licNo": "6849",
       "licType": "Monitoring",
       "licName": "CBI - Haines Road Children's Residence",
-      "licPlace": "Newmarket",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Newmarket",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular"
     },
     {
@@ -135,9 +135,9 @@
       "licNo": "6849",
       "licType": "Renewal",
       "licName": "CBI - Haines Road Children's Residence",
-      "licPlace": "Newmarket",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Newmarket",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular"
     },
     {
@@ -145,9 +145,9 @@
       "licNo": "6849",
       "licType": "Monitoring",
       "licName": "CBI Health Group",
-      "licPlace": "East Gwillimbury",
-      "licPhone": "905-237-9801",
-
+      "licCity": "East Gwillimbury",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular"
     },
     {
@@ -155,9 +155,9 @@
       "licNo": "6849",
       "licType": "Renewal",
       "licName": "CBI Health Group",
-      "licPlace": "East Gwillimbury",
-      "licPhone": "905-237-9801",
-
+      "licCity": "East Gwillimbury",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular"
     },
     {
@@ -165,9 +165,9 @@
       "licNo": "1984",
       "licType": "Monitoring",
       "licName": "Cedar Heights (Stouffville) Residential Living",
-      "licPlace": "Stouffville",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Stouffville",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular with conditions"
     },
     {
@@ -175,9 +175,9 @@
       "licNo": "1984",
       "licType": "Renewal",
       "licName": "Cedar Heights (Stouffville) Residential Living",
-      "licPlace": "Stouffville",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Stouffville",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular with conditions"
     },
     {
@@ -185,9 +185,9 @@
       "licNo": "1697",
       "licType": "Renewal",
       "licName": "Cedar Heights Residential Living",
-      "licPlace": "Tottenham",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Tottenham",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular with conditions"
     },
     {
@@ -195,9 +195,9 @@
       "licNo": "1697",
       "licType": "Renewal",
       "licName": "Cedar Heights Residential Living - Markham",
-      "licPlace": "Markham",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Markham",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular with conditions"
     },
     {
@@ -205,9 +205,9 @@
       "licNo": "1697",
       "licType": "Renewal",
       "licName": "Cedar Heights - Orangeville",
-      "licPlace": "Orangeville",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Orangeville",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular with conditions"
     },
     {
@@ -215,9 +215,9 @@
       "licNo": "1697",
       "licType": "Renewal",
       "licName": "Cedar Heights - Mono",
-      "licPlace": "",
-      "licPhone": "905-237-9801",
-
+      "licCity": "",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular with conditions"
     },
     {
@@ -225,9 +225,9 @@
       "licNo": "1083",
       "licType": "Renewal",
       "licName": "Central West Specialized Development Services - House 5 Respite Care",
-      "licPlace": "Oakville",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Oakville",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular with conditions"
     },
     {
@@ -235,9 +235,9 @@
       "licNo": "5484",
       "licType": "Renewal",
       "licName": "The CAS of the Regional Municipality of Waterloo - 300 Langford",
-      "licPlace": "Waterloo",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Waterloo",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular"
     },
     {
@@ -245,9 +245,9 @@
       "licNo": "6754",
       "licType": "Renewal",
       "licName": "Cornerstone Group Home Inc.",
-      "licPlace": "Brampton",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Brampton",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular with conditions"
     },
     {
@@ -255,9 +255,9 @@
       "licNo": "4236",
       "licType": "Monitoring",
       "licName": "Marjorie Amos Residence",
-      "licPlace": "Brampton",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Brampton",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular"
     },
     {
@@ -265,9 +265,9 @@
       "licNo": "4236",
       "licType": "Renewal",
       "licName": "Marjorie Amos Residence",
-      "licPlace": "Brampton",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Brampton",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular"
     },
     {
@@ -275,9 +275,9 @@
       "licNo": "6048",
       "licType": "Renewal",
       "licName": "Empower Simcoe (21 Broadfoot Road)",
-      "licPlace": "Barrie",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Barrie",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular"
     },
     {
@@ -285,9 +285,9 @@
       "licNo": "6048",
       "licType": "Renewal",
       "licName": "Empower Simcoe (35 Bishop Drive)",
-      "licPlace": "Barrie",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Barrie",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular"
     },
     {
@@ -295,9 +295,9 @@
       "licNo": "6835",
       "licType": "Renewal",
       "licName": "ErinoakKids Centre for Treatment and Development - 10145 McVean Drive",
-      "licPlace": "Brampton",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Brampton",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular with conditions"
     },
     {
@@ -305,9 +305,9 @@
       "licNo": "Feb-43",
       "licType": "Renewal",
       "licName": "Everymind Mental Health Services Caledon South ResIdence",
-      "licPlace": "Caledon",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Caledon",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular"
     },
     {
@@ -315,9 +315,9 @@
       "licNo": "4242",
       "licType": "Monitoring",
       "licName": "The Salvation Army Correctional & Justice Services - Cuthbert House",
-      "licPlace": "Brampton",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Brampton",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular"
     },
     {
@@ -325,9 +325,9 @@
       "licNo": "4242",
       "licType": "Renewal",
       "licName": "The Salvation Army Correctional & Justice Services - Cuthbert House",
-      "licPlace": "Brampton",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Brampton",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular"
     },
     {
@@ -335,9 +335,9 @@
       "licNo": "1902",
       "licType": "Renewal",
       "licName": "Hatts Off Inc.- Ellis Residence",
-      "licPlace": "Waterloo",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Waterloo",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular with conditions"
     },
     {
@@ -345,9 +345,9 @@
       "licNo": "43-0063",
       "licType": "Renewal",
       "licName": "Hopewell Children's Homes Inc. -  Admin Office - Respite 5651-B #86 MCSS DS",
-      "licPlace": "Ariss",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Ariss",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular with conditions"
     },
     {
@@ -355,9 +355,9 @@
       "licNo": "6398",
       "licType": "Renewal",
       "licName": "The Little Lake Residence",
-      "licPlace": "Barrie",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Barrie",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular with conditions"
     },
     {
@@ -365,9 +365,9 @@
       "licNo": "6803",
       "licType": "Renewal",
       "licName": "Humphrey's Family Tree Residence",
-      "licPlace": "Brampton",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Brampton",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular"
     },
     {
@@ -375,9 +375,9 @@
       "licNo": "6838",
       "licType": "Renewal",
       "licName": "Kinark Child & Family Services - Vanier Residential Services",
-      "licPlace": "Mississauga",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Mississauga",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular"
     },
     {
@@ -385,9 +385,9 @@
       "licNo": "6838",
       "licType": "Renewal",
       "licName": "KINARK CHILD AND FAMILY SRVC CORP Gorham",
-      "licPlace": "Newmarket",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Newmarket",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular"
     },
     {
@@ -395,9 +395,9 @@
       "licNo": "6838",
       "licType": "Renewal",
       "licName": "Kinark Child and Family Services: Simcoe - Barrie - Grove St - CFI",
-      "licPlace": "Barrie",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Barrie",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular"
     },
     {
@@ -405,9 +405,9 @@
       "licNo": "3340",
       "licType": "Renewal",
       "licName": "Kushions Inc.",
-      "licPlace": "Barrie",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Barrie",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular"
     },
     {
@@ -415,9 +415,9 @@
       "licNo": "3340",
       "licType": "Renewal",
       "licName": "Kushions II",
-      "licPlace": "Barrie",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Barrie",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular"
     },
     {
@@ -425,9 +425,9 @@
       "licNo": "2092",
       "licType": "Renewal",
       "licName": "K-W Habilitation Services - Forest Hill (MCYS)",
-      "licPlace": "Kitchener",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Kitchener",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular"
     },
     {
@@ -435,9 +435,9 @@
       "licNo": "5617",
       "licType": "Monitoring",
       "licName": "Latitude Child and Youth Services",
-      "licPlace": "Oakville",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Oakville",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular with conditions"
     },
     {
@@ -445,9 +445,9 @@
       "licNo": "5617",
       "licType": "Renewal",
       "licName": "Latitude Child and Youth Services",
-      "licPlace": "Oakville",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Oakville",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular with conditions"
     },
     {
@@ -455,9 +455,9 @@
       "licNo": "5617",
       "licType": "Monitoring",
       "licName": "Latitude 2",
-      "licPlace": "Oakville",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Oakville",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular with conditions"
     },
     {
@@ -465,9 +465,9 @@
       "licNo": "5617",
       "licType": "Renewal",
       "licName": "Latitude 2",
-      "licPlace": "Oakville",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Oakville",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular with conditions"
     },
     {
@@ -475,9 +475,9 @@
       "licNo": "4181",
       "licType": "Monitoring",
       "licName": "LUTHERWOOD",
-      "licPlace": "Waterloo",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Waterloo",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular"
     },
     {
@@ -485,9 +485,9 @@
       "licNo": "4181",
       "licType": "Renewal",
       "licName": "LUTHERWOOD",
-      "licPlace": "Waterloo",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Waterloo",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular"
     },
     {
@@ -495,9 +495,9 @@
       "licNo": "4181",
       "licType": "Renewal",
       "licName": "Betty Thompson Youth Centre - Safe Haven Shelter - 41 Weber",
-      "licPlace": "Kitchener",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Kitchener",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular"
     },
     {
@@ -505,9 +505,9 @@
       "licNo": "703",
       "licType": "Renewal",
       "licName": "New Path Youth & Family Counselling Services of Simcoe County - Deerview",
-      "licPlace": "Cookstown",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Cookstown",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular with conditions"
     },
     {
@@ -515,9 +515,9 @@
       "licNo": "703",
       "licType": "Renewal",
       "licName": "New Path Youth & Family Services of Simcoe County - Pinecrest",
-      "licPlace": "Cookstown",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Cookstown",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular with conditions"
     },
     {
@@ -525,9 +525,9 @@
       "licNo": "1125",
       "licType": "Renewal",
       "licName": "Oakdale Child & Family Services - Amber House",
-      "licPlace": "Stouffville",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Stouffville",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular"
     },
     {
@@ -535,9 +535,9 @@
       "licNo": "1125",
       "licType": "Renewal",
       "licName": "Oakdale Child & Family Services, Oakdale VI - Group - Sequoia House",
-      "licPlace": "Barrie",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Barrie",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular"
     },
     {
@@ -545,9 +545,9 @@
       "licNo": "1125",
       "licType": "Renewal",
       "licName": "Oakdale Child & Family Services, Oakdale V  - Group - Cundles Residence",
-      "licPlace": "Barrie",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Barrie",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular"
     },
     {
@@ -555,9 +555,9 @@
       "licNo": "1125",
       "licType": "Renewal",
       "licName": "Oakdale Child & Family Service - Minesing Residence",
-      "licPlace": "Minesing",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Minesing",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular"
     },
     {
@@ -565,9 +565,9 @@
       "licNo": "1125",
       "licType": "Monitoring",
       "licName": "Oakdale Child & Family Services - St. Vincent - Group",
-      "licPlace": "Midhurst",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Midhurst",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular"
     },
     {
@@ -575,9 +575,9 @@
       "licNo": "1125",
       "licType": "Renewal",
       "licName": "Oakdale Child & Family Services - St. Vincent - Group",
-      "licPlace": "Midhurst",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Midhurst",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular"
     },
     {
@@ -585,9 +585,9 @@
       "licNo": "3510",
       "licType": "Renewal",
       "licName": "Parents for Community Living Kitchener-Waterloo Inc. - Malabar Home (MCYS)",
-      "licPlace": "Waterloo",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Waterloo",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular with conditions"
     },
     {
@@ -595,9 +595,9 @@
       "licNo": "3510",
       "licType": "Renewal",
       "licName": "Parents for Community Living Kitchener-Waterloo Inc. - Casey Dr. (MCYS)",
-      "licPlace": "Kitchener",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Kitchener",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular with conditions"
     },
     {
@@ -605,9 +605,9 @@
       "licNo": "43-0042",
       "licType": "Monitoring",
       "licName": "Pioneer Youth Services Associates - Albert Program",
-      "licPlace": "Waterloo",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Waterloo",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular with conditions"
     },
     {
@@ -615,9 +615,9 @@
       "licNo": "43-0042",
       "licType": "Renewal",
       "licName": "Pioneer Youth Services Associates - Albert Program",
-      "licPlace": "Waterloo",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Waterloo",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular with conditions"
     },
     {
@@ -625,9 +625,9 @@
       "licNo": "43-0042",
       "licType": "Renewal",
       "licName": "Pioneer Youth Services - Queens Program",
-      "licPlace": "Kitchener",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Kitchener",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular with conditions"
     },
     {
@@ -635,9 +635,9 @@
       "licNo": "43-0042",
       "licType": "Renewal",
       "licName": "Pioneer Youth Services - Lang Program",
-      "licPlace": "Kitchener",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Kitchener",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular with conditions"
     },
     {
@@ -645,9 +645,9 @@
       "licNo": "4184",
       "licType": "Monitoring",
       "licName": "Portage Ontario",
-      "licPlace": "Elora",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Elora",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular"
     },
     {
@@ -655,9 +655,9 @@
       "licNo": "4184",
       "licType": "Renewal",
       "licName": "Portage Ontario",
-      "licPlace": "Elora",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Elora",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular"
     },
     {
@@ -665,9 +665,9 @@
       "licNo": "4185",
       "licType": "Monitoring",
       "licName": "Ray of Hope - Secure Custody & Detention",
-      "licPlace": "Petersburg",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Petersburg",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular with conditions"
     },
     {
@@ -675,9 +675,9 @@
       "licNo": "4185",
       "licType": "Renewal",
       "licName": "Ray of Hope - Secure Custody & Detention",
-      "licPlace": "Petersburg",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Petersburg",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular with conditions"
     },
     {
@@ -685,9 +685,9 @@
       "licNo": "2222",
       "licType": "Monitoring",
       "licName": "Reach Out Centre for Kids - Aberdeen - 2262 Lakeshore",
-      "licPlace": "Oakville",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Oakville",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular"
     },
     {
@@ -695,9 +695,9 @@
       "licNo": "2222",
       "licType": "Renewal",
       "licName": "Reach Out Centre for Kids - Aberdeen - 2262 Lakeshore",
-      "licPlace": "Oakville",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Oakville",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular"
     },
     {
@@ -705,9 +705,9 @@
       "licNo": "6472",
       "licType": "Renewal",
       "licName": "Reena - Barhill",
-      "licPlace": "Maple",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Maple",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular"
     },
     {
@@ -715,9 +715,9 @@
       "licNo": "2486",
       "licType": "Renewal",
       "licName": "Timber Lane Residence",
-      "licPlace": "Woodbridge",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Woodbridge",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular"
     },
     {
@@ -725,9 +725,9 @@
       "licNo": "43-0021",
       "licType": "Renewal",
       "licName": "Saint Monica House - 231 Herbert Street",
-      "licPlace": "Waterloo",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Waterloo",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular"
     },
     {
@@ -735,9 +735,9 @@
       "licNo": "6872",
       "licType": "Renewal",
       "licName": "Springwater Residential Centre",
-      "licPlace": "Springwater",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Springwater",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular with conditions"
     },
     {
@@ -745,9 +745,9 @@
       "licNo": "2404",
       "licType": "Renewal",
       "licName": "Sunbeam Community and Developmental Services - Kingsdale GH",
-      "licPlace": "Kitchener",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Kitchener",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular with conditions"
     },
     {
@@ -755,9 +755,9 @@
       "licNo": "2404",
       "licType": "Renewal",
       "licName": "Sunbeam Community and Developmental Services - Sims GH",
-      "licPlace": "Kitchener",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Kitchener",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular with conditions"
     },
     {
@@ -765,9 +765,9 @@
       "licNo": "2404",
       "licType": "Renewal",
       "licName": "Sunbeam Community and Developmental Services - Vos GH",
-      "licPlace": "Kitchener",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Kitchener",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular with conditions"
     },
     {
@@ -775,9 +775,9 @@
       "licNo": "2404",
       "licType": "Renewal",
       "licName": "Sunbeam Community and Developmental Services - The Loft",
-      "licPlace": "Kitchener",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Kitchener",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular with conditions"
     },
     {
@@ -785,9 +785,9 @@
       "licNo": "2404",
       "licType": "Renewal",
       "licName": "Sunbeam Community and Developmental Services - The Apartment (MCYS)",
-      "licPlace": "Kitchener",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Kitchener",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular with conditions"
     },
     {
@@ -795,9 +795,9 @@
       "licNo": "2404",
       "licType": "Renewal",
       "licName": "Sunbeam Community and Developmental Services - Whaley GH",
-      "licPlace": "Kitchener",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Kitchener",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular with conditions"
     },
     {
@@ -805,9 +805,9 @@
       "licNo": "3068",
       "licType": "Renewal",
       "licName": "The Cedarbrook Society",
-      "licPlace": "Milton",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Milton",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular with conditions"
     },
     {
@@ -815,9 +815,9 @@
       "licNo": "2416",
       "licType": "Renewal",
       "licName": "TLK Residential Services - Destiny House",
-      "licPlace": "Richmond Hill",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Richmond Hill",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular"
     },
     {
@@ -825,9 +825,9 @@
       "licNo": "2416",
       "licType": "Renewal",
       "licName": "T.L.K. Residential Services - Springboard",
-      "licPlace": "Richmond Hill",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Richmond Hill",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular"
     },
     {
@@ -835,9 +835,9 @@
       "licNo": "827",
       "licType": "Renewal",
       "licName": "York Hills Centre for Children Youth and Families - Blue Hills Child and Family Services",
-      "licPlace": "Aurora",
-      "licPhone": "905-237-9801",
-
+      "licCity": "Aurora",
+      "licPhone": null,
+      "licRegion": "Central",
       "licCondition": "Regular with conditions"
     }
   ]
